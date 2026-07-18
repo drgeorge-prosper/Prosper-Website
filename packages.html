@@ -338,12 +338,13 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.6);border-top:1px soli
 .credentials-band{background:var(--charcoal);padding:56px 0 52px;border-top:1px solid rgba(194,154,91,.22)}
 .credentials-band .eyebrow{color:var(--gold);text-align:center;margin-bottom:14px}
 .credentials-band .cred-sub{max-width:600px;margin:0 auto 34px;text-align:center;font-size:15px;color:rgba(244,239,230,.72);line-height:1.7}
-.credentials-row{display:flex;justify-content:center;align-items:center;gap:18px;flex-wrap:wrap}
-.credential-plaque{background:var(--bone);border-radius:var(--radius);padding:14px 22px;display:flex;align-items:center;justify-content:center;height:76px;min-width:150px}
-.credential-plaque img{max-height:42px;max-width:170px;width:auto;height:auto;object-fit:contain;display:block}
+.credentials-row{display:flex;justify-content:center;align-items:stretch;gap:20px;flex-wrap:wrap}
+.credential-plaque{background:var(--bone);border-radius:var(--radius);padding:22px 28px;display:flex;align-items:center;justify-content:center;height:112px;min-width:190px;flex:1 1 190px;max-width:230px}
+.credential-plaque img{max-height:72px;max-width:100%;width:auto;height:auto;object-fit:contain;display:block}
 .credential-plaque .inst-text{font-family:var(--sans);font-weight:700;font-size:14.5px;letter-spacing:0.03em;color:var(--charcoal);text-align:center;line-height:1.3}
 @media (max-width:640px){
-  .credential-plaque{min-width:0;flex:1 1 calc(50% - 18px)}
+  .credential-plaque{min-width:0;flex:1 1 calc(50% - 20px);height:96px}
+  .credential-plaque img{max-height:56px}
 }
 </style>
 </head>
@@ -523,9 +524,6 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.6);border-top:1px soli
       </div>
       <div class="credential-plaque">
         <img src="/faculty-sport-exercise-medicine.png" alt="Faculty of Sport and Exercise Medicine UK">
-      </div>
-      <div class="credential-plaque">
-        <div class="inst-text">GMC<br>Registered</div>
       </div>
       <div class="credential-plaque">
         <img src="/apex-longevity-academy.png" alt="Apex Longevity Academy">
