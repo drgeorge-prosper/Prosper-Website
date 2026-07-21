@@ -84,6 +84,18 @@ section{padding:96px 0}
 
 .why{background:var(--white)}
 
+/* Doctor */
+.doctor{background:var(--white)}
+.doc-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:72px;align-items:center}
+.doc-photo{border-radius:var(--radius);overflow:hidden;border:1px solid rgba(26,24,21,.1);position:relative}
+.doc-photo img{width:100%;height:auto}
+.doc-photo::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px rgba(194,154,91,.35);border-radius:var(--radius);pointer-events:none}
+.doc-copy h2{font-size:clamp(30px,3.8vw,44px);font-weight:500;margin-bottom:8px}
+.doc-copy p{font-size:16.5px;color:var(--ink-soft);line-height:1.8;margin-bottom:20px}
+@media (max-width:920px){
+  .doc-grid{grid-template-columns:1fr;gap:40px}
+}
+
 /* Process / steps */
 .process{background:var(--charcoal);color:var(--bone)}
 .process .section-head h2{color:var(--white)}
@@ -284,6 +296,22 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
       <div class="eyebrow">Testing philosophy</div>
       <h2>Testing, chosen properly.</h2>
       <p>Prosper does not sell unrestricted testing. Investigations are selected by Dr George, linked to your goals and clinical context, and split honestly into recommended and optional. You will always know what something costs and why it is suggested before you pay any provider.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Consultation image -->
+<section class="doctor" style="padding-top:0">
+  <div class="container">
+    <div class="doc-grid">
+      <div class="doc-photo reveal">
+        <img src="/dr-george-with-patient.jpg" alt="Dr George Collins in consultation with a patient">
+      </div>
+      <div class="doc-copy reveal">
+        <div class="eyebrow">The initial consultation</div>
+        <h2>A full hour, in person with you.</h2>
+        <p>This is where your baseline results, your history and your goals come together. Not a walkthrough of numbers, a conversation about what they mean for you and what happens next.</p>
+      </div>
     </div>
   </div>
 </section>
