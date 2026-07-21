@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /apply/book
+
+Sitemap: https://prosper-clinic.com/sitemap.xml
