@@ -44,3 +44,7 @@ Single source of truth for Prosper v2 configuration values. Runtime values consu
 
 ## Analytics events (not yet instrumented, placeholder only)
 apply_click (source), apply_submit, book_page_view, discovery_call_booked, priority_list_submit, coach_enquiry_submit
+
+
+## Deploy trigger note
+Trivial edit to trigger the first Netlify branch-deploy build for prosper-v2, 21 July 2026.
