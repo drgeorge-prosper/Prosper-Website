@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Coaches | Prosper Performance</title>
-<meta name="description" content="Prosper Performance is the medical layer that sits alongside your coaching. Doctor-led insight for your clients, shared only with their explicit consent.">
+<title>Sports Performance Medicine for Athletes and Coaches | Prosper</title>
+<meta name="description" content="Prosper Performance provides doctor-led medical support alongside your coaching, for athletes and serious performers, shared only with explicit client consent.">
 <link rel="canonical" href="https://prosper-clinic.com/for-coaches">
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta property="og:type" content="website">
-<meta property="og:title" content="For Coaches | Prosper Performance">
-<meta property="og:description" content="Prosper Performance is the medical layer that sits alongside your coaching. Doctor-led insight for your clients, shared only with their explicit consent.">
+<meta property="og:title" content="Sports Performance Medicine for Athletes and Coaches | Prosper">
+<meta property="og:description" content="Prosper Performance provides doctor-led medical support alongside your coaching, for athletes and serious performers, shared only with explicit client consent.">
 <meta property="og:url" content="https://prosper-clinic.com/for-coaches">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -91,6 +91,13 @@ section{padding:96px 0}
 
 /* Coaches band */
 .coaches{background:var(--bone-deep)}
+.coach-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:8px}
+.coach-card{background:var(--white);border:1px solid rgba(26,24,21,.08);border-radius:var(--radius);padding:36px}
+.coach-card h3{font-size:20px;font-weight:600;margin-bottom:12px}
+.coach-card p{font-size:14.5px;color:var(--ink-soft);line-height:1.75}
+@media (max-width:920px){
+  .coach-grid{grid-template-columns:1fr}
+}
 
 /* Contact form */
 .contact-card{background:var(--white);border:1px solid rgba(26,24,21,.1);border-radius:var(--radius);padding:48px;max-width:620px;border-top:3px solid var(--gold)}
@@ -155,7 +162,7 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
   <div class="ticker-track" id="tickerTrack">
     <span>Doctor-led longevity &amp; performance medicine</span>
     <span>Founded by Dr George Collins</span>
-    <span>Based in Bath, United Kingdom</span>
+    <span>Supporting clients across the UK</span>
     <span>GMC-registered doctor</span>
     <span>Complimentary discovery call</span>
     <span>A personal plan, properly reviewed</span>
@@ -188,34 +195,45 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
 <!-- What it is -->
 <section class="why">
   <div class="container">
-    <div class="why-grid">
-      <div class="why-copy reveal">
-        <div class="eyebrow">What it is</div>
-        <p>Prosper Performance is the performance-focused version of our core doctor-led programme, for athletes, serious recreational exercisers and clients working with coaches. Same structure, sharper emphasis: training capacity, recovery, cardiorespiratory fitness, body composition, fuelling, and the hormonal and metabolic factors that quietly cap progress.</p>
+    <div class="section-head reveal">
+      <div class="eyebrow">What it is</div>
+      <h2>The performance-focused version of Clarity.</h2>
+      <p>Same structure, sharper emphasis: training capacity, recovery, body composition and the hormonal factors that quietly cap progress.</p>
+    </div>
+    <div class="coach-grid">
+      <div class="coach-card reveal">
+        <h3>What Prosper adds</h3>
+        <p>A doctor-led medical layer covering training capacity, recovery, fuelling and the metabolic factors that cap progress.</p>
       </div>
-      <aside class="reasons reveal">
-        <h3>You will recognise the client</h3>
-        <ul>
-          <li>Training consistently without progressing</li>
-          <li>Recovery that never quite lands</li>
-          <li>Fatigue that outlasts the deload</li>
-          <li>Weight that will not move despite genuine adherence</li>
-          <li>Recurrent injury</li>
-          <li>Questions that sit outside your scope, and should not have to sit inside it</li>
-        </ul>
-      </aside>
+      <div class="coach-card reveal">
+        <h3>What stays with the coach</h3>
+        <p>You own the training relationship and the programming. Prosper never trains your client or comments on your coaching.</p>
+      </div>
+      <div class="coach-card reveal">
+        <h3>How collaboration works</h3>
+        <p>With written consent, you receive a focused performance summary. Never sensitive medical detail, never shared without consent.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Consent -->
+<!-- Who this helps -->
 <section class="coaches">
   <div class="container">
     <div class="section-head reveal">
-      <div class="eyebrow">How it works with you</div>
-      <h2>Your client, your relationship, their consent.</h2>
-      <p>Prosper complements your coaching rather than replacing it. Where your client consents, explicitly and in writing, you receive a focused performance summary: recovery considerations, training implications, fuelling recommendations and practical priorities. Never sensitive medical detail. Nothing is shared without consent, ever.</p>
+      <div class="eyebrow">Who this helps</div>
+      <h2>You will recognise the client.</h2>
     </div>
+    <aside class="reasons reveal" style="max-width:640px">
+      <ul>
+        <li>Training consistently without progressing</li>
+        <li>Recovery that never quite lands</li>
+        <li>Fatigue that outlasts the deload</li>
+        <li>Weight that will not move despite genuine adherence</li>
+        <li>Recurrent injury</li>
+        <li>Questions that sit outside your scope</li>
+      </ul>
+    </aside>
   </div>
 </section>
 
@@ -254,7 +272,7 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
 <!-- Credentials band -->
 <section class="credentials-band">
   <div class="container">
-    <div class="eyebrow">Professional Accreditations</div>
+    <div class="eyebrow">Training and professional affiliations</div>
     <p class="cred-sub">Education and professional training from leading UK institutions.</p>
     <div class="credentials-row">
       <div class="credential-plaque">
@@ -285,6 +303,10 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
         <a href="/how-it-works">How It Works</a>
         <a href="/for-coaches">For Coaches</a>
         <a href="/about">About</a>
+        <a href="/longevity-medicine-uk">Longevity Medicine UK</a>
+        <a href="/executive-health">Executive Health</a>
+        <a href="/prosper-continuum">Prosper Continuum</a>
+        <a href="/insights">Insights</a>
         <a href="/privacy">Privacy Policy</a>
         <a href="/terms">Terms</a>
         <a href="/cancellations">Cancellations</a>
