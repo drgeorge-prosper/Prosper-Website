@@ -2,4 +2,16 @@ User-agent: *
 Allow: /
 Disallow: /apply/book
 
+User-agent: Googlebot
+Allow: /
+Disallow: /apply/book
+
+User-agent: Bingbot
+Allow: /
+Disallow: /apply/book
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /apply/book
+
 Sitemap: https://prosper-clinic.com/sitemap.xml

@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Doctor-Led Longevity Medicine Across the UK | Prosper</title>
-<meta name="description" content="What longevity medicine means at Prosper: doctor-led baseline testing, personal interpretation and structured planning for clients across the UK.">
-<link rel="canonical" href="https://prosper-clinic.com/longevity-medicine-uk">
+<title>Prosper Continuum | Structured Follow-Up | Prosper</title>
+<meta name="description" content="Prosper Continuum is structured, ongoing support after your Prosper Clarity programme, keeping you accountable and moving forward.">
+<link rel="canonical" href="https://prosper-clinic.com/prosper-continuum">
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Doctor-Led Longevity Medicine Across the UK | Prosper">
-<meta property="og:description" content="What longevity medicine means at Prosper: doctor-led baseline testing, personal interpretation and structured planning for clients across the UK.">
-<meta property="og:url" content="https://prosper-clinic.com/longevity-medicine-uk">
+<meta property="og:title" content="Prosper Continuum | Structured Follow-Up | Prosper">
+<meta property="og:description" content="Prosper Continuum is structured, ongoing support after your Prosper Clarity programme, keeping you accountable and moving forward.">
+<meta property="og:url" content="https://prosper-clinic.com/prosper-continuum">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -20,8 +20,8 @@
 {
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
-  "name": "Doctor-led longevity medicine across the UK",
-  "url": "https://prosper-clinic.com/longevity-medicine-uk",
+  "name": "Prosper Continuum",
+  "url": "https://prosper-clinic.com/prosper-continuum",
   "about": {"@type": "MedicalOrganization", "name": "Prosper", "legalName": "Dr G Collins Ltd"}
 }
 </script>
@@ -75,29 +75,11 @@ section{padding:88px 0}
 .section-head p{margin-top:16px;font-size:16.5px;color:var(--ink-soft);line-height:1.75}
 .why{background:var(--white)}
 
-.clarity-checklist{list-style:none;margin:22px 0 8px;max-width:640px}
-.clarity-checklist li{position:relative;padding:11px 0 11px 30px;border-top:1px solid rgba(26,24,21,.08);font-size:15.5px;color:var(--charcoal)}
-.clarity-checklist li:first-child{border-top:none}
-.clarity-checklist li::before{content:"✓";position:absolute;left:0;color:var(--gold-deep);font-weight:700}
-
-.coach-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.coach-card{background:var(--bone);border:1px solid rgba(26,24,21,.08);border-radius:var(--radius);padding:32px}
-.coach-card h3{font-size:19px;font-weight:600;margin-bottom:10px}
-.coach-card p{font-size:14.5px;color:var(--ink-soft);line-height:1.7}
-
-.who-list{list-style:none;max-width:700px}
-.who-list li{position:relative;padding:9px 0 9px 26px;font-size:16px;color:var(--charcoal);border-top:1px solid rgba(26,24,21,.07)}
-.who-list li:first-child{border-top:none}
-.who-list li::before{content:"";position:absolute;left:2px;top:18px;width:7px;height:7px;background:var(--gold);border-radius:50%}
-
-.faq{max-width:820px}
-.faq details{border-top:1px solid rgba(26,24,21,.12)}
-.faq details:last-of-type{border-bottom:1px solid rgba(26,24,21,.12)}
-.faq summary{cursor:pointer;list-style:none;padding:22px 40px 22px 0;font-weight:600;font-size:16.5px;position:relative}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";position:absolute;right:4px;top:50%;transform:translateY(-50%);font-family:var(--serif);font-size:26px;color:var(--gold);transition:transform .25s}
-.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
-.faq details p{padding:0 0 24px;font-size:15px;color:var(--ink-soft);line-height:1.8;max-width:720px}
+.continuum-cards{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:700px}
+.continuum-card{background:var(--bone);border:1px solid rgba(26,24,21,.08);border-radius:var(--radius);padding:32px}
+.continuum-card b{font-family:var(--serif);font-size:22px;font-weight:600;display:block;margin-bottom:10px}
+.continuum-card p{font-size:15px;color:var(--ink-soft);line-height:1.6}
+.continuum-note{margin-top:20px;font-size:14px;color:var(--ink-soft);max-width:700px}
 
 .cta{background:var(--charcoal);color:var(--bone);text-align:center}
 .cta .eyebrow{color:var(--gold)}
@@ -130,8 +112,10 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
   .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bone);flex-direction:column;padding:24px;gap:20px;border-bottom:1px solid rgba(26,24,21,.1)}
   .nav-links.open{display:flex}
   .nav-toggle{display:block}
-  .coach-grid{grid-template-columns:1fr}
   section{padding:64px 0}
+}
+@media (max-width:540px){
+  .continuum-cards{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -163,119 +147,44 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
 
 <header class="page-hero">
   <div class="container">
-    <div class="eyebrow">Longevity medicine</div>
-    <h1>Doctor-led longevity medicine across the UK</h1>
-    <p>A personalised approach to healthy ageing and long-term performance, built on baseline testing, medical interpretation and a structured plan. Supporting clients across the UK.</p>
+    <div class="eyebrow">Prosper Continuum</div>
+    <h1>Continuing your progress.</h1>
+    <p>Every Prosper Clarity programme ends with a clear recommendation for what comes next. Prosper Continuum is structured, ongoing support to keep you supported and moving forward.</p>
   </div>
 </header>
 
 <section class="why">
   <div class="container">
     <div class="section-head reveal">
-      <div class="eyebrow">What it means at Prosper</div>
-      <h2>Longevity medicine, defined properly.</h2>
-      <p>Longevity medicine looks beyond a single symptom or a single test. It considers your cardiovascular and metabolic risk, hormonal health, body composition and recovery capacity together, then builds a plan around how you want to feel, perform and age.</p>
+      <div class="eyebrow">What it is</div>
+      <h2>Support that continues after the plan.</h2>
+      <p>A single programme gets you a clear plan. Prosper Continuum keeps that plan alive: regular check-ins, early course-correction, and a doctor who already knows your history rather than starting from zero each time.</p>
     </div>
-    <aside class="reasons" style="background:var(--bone);border:1px solid rgba(26,24,21,.08);border-radius:var(--radius);padding:32px;max-width:700px">
-      <h3 style="font-size:18px;margin-bottom:16px;font-weight:600">Who this is designed for</h3>
-      <ul class="who-list">
-        <li>People noticing energy, recovery or performance changes worth understanding properly</li>
-        <li>Professionals and founders whose demanding careers leave little time for their own health</li>
-        <li>Athletes and coached clients wanting the physiological depth used in elite sport</li>
-        <li>Anyone wanting a genuine, evidence-led plan for healthy ageing, not a generic test</li>
-      </ul>
-    </aside>
-  </div>
-</section>
-
-<section class="why" style="background:var(--bone)">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="eyebrow">The programme</div>
-      <h2>Prosper Clarity.</h2>
-      <p>One considered programme, not a string of appointments or a testing menu.</p>
-    </div>
-    <ul class="clarity-checklist reveal">
-      <li>Comprehensive baseline testing</li>
-      <li>60-minute doctor-led consultation</li>
-      <li>Individual health and treatment plan</li>
-      <li>8 to 12 week implementation period</li>
-      <li>45-minute progress review</li>
-    </ul>
-    <div style="margin-top:28px">
-      <a href="/how-it-works" class="btn btn-outline">See the full process</a>
-    </div>
-  </div>
-</section>
-
-<section class="why">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="eyebrow">How Prosper is different</div>
-      <h2>Not a generic testing service.</h2>
-    </div>
-    <div class="coach-grid">
-      <div class="coach-card reveal">
-        <h3>Testing, not test-selling</h3>
-        <p>Investigations are chosen by Dr George for your goals and context. You are never asked to build your own panel from a menu.</p>
+    <div class="continuum-cards reveal">
+      <div class="continuum-card">
+        <b>Quarterly</b>
+        <p>Structured check-ins every three months.</p>
       </div>
-      <div class="coach-card reveal">
-        <h3>Interpretation, not just a report</h3>
-        <p>Results mean little in isolation. Every finding is read together and explained in a full consultation, not left in a PDF.</p>
-      </div>
-      <div class="coach-card reveal">
-        <h3>A plan, not a one-off</h3>
-        <p>A written plan with a structured implementation period and progress review, so the work continues after the consultation.</p>
+      <div class="continuum-card">
+        <b>Six-monthly</b>
+        <p>Twice-yearly review and recalibration.</p>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="why" style="background:var(--bone)">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="eyebrow">Getting started</div>
-      <h2>Application, then a conversation.</h2>
-      <p>A short, non-clinical application, followed by a complimentary 15-minute discovery call with Dr George. Consultations are arranged directly with Prosper following onboarding, and the practical details and expected costs are explained before you proceed.</p>
-    </div>
-  </div>
-</section>
-
-<section class="why">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="eyebrow">Questions</div>
-      <h2>Frequently asked.</h2>
-    </div>
-    <div class="faq reveal">
-      <details>
-        <summary>Is this the same as a private GP service?</summary>
-        <p>No. Prosper is a longevity and performance programme built around baseline testing, medical interpretation and structured follow-up. It complements your GP rather than replacing primary care.</p>
-      </details>
-      <details>
-        <summary>Do I need to be based near a specific city?</summary>
-        <p>No. Prosper supports clients across the UK. Consultations are arranged directly with Prosper following onboarding, and the format is explained during your discovery call.</p>
-      </details>
-      <details>
-        <summary>What does Prosper Clarity include?</summary>
-        <p>Comprehensive baseline testing, a 60-minute doctor-led consultation, an individual health and treatment plan, an 8 to 12 week implementation period and a 45-minute progress review.</p>
-      </details>
-      <details>
-        <summary>How is this different from an at-home testing kit?</summary>
-        <p>A testing kit gives you numbers. Prosper gives you a doctor who reads those numbers alongside your history and goals, then builds and reviews a plan with you.</p>
-      </details>
-    </div>
+    <p class="continuum-note reveal">Recommended clinically, at your Prosper Clarity review. Never sold upfront, and never a condition of starting your first programme.</p>
   </div>
 </section>
 
 <section class="cta">
   <div class="container reveal">
-    <div class="eyebrow">Begin with a conversation</div>
+    <div class="eyebrow">Start with Prosper Clarity</div>
     <h2>Begin with a conversation.</h2>
-    <p>Prosper is a private, self-funded service. The recommended pathway and all expected costs are explained clearly before you decide whether to proceed.</p>
+    <p>Prosper Continuum follows a completed Prosper Clarity programme. If you haven't started yet, applying is the first step.</p>
     <div class="cta-btns">
       <a href="/apply" class="btn btn-gold">Apply to Prosper</a>
       <div class="cta-subline">A two-minute application, then a complimentary 15-minute call with Dr George.</div>
+    </div>
+    <div style="margin-top:20px">
+      <a href="/how-it-works" class="btn btn-outline" style="border-color:rgba(244,239,230,.45);color:var(--bone)">See how Prosper Clarity works</a>
     </div>
   </div>
 </section>
@@ -304,7 +213,6 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
         <a href="/about">About</a>
         <a href="/longevity-medicine-uk">Longevity Medicine UK</a>
         <a href="/executive-health">Executive Health</a>
-        <a href="/prosper-continuum">Prosper Continuum</a>
         <a href="/insights">Insights</a>
         <a href="/privacy">Privacy Policy</a>
         <a href="/terms">Terms</a>
