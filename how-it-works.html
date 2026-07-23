@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>How It Works | Prosper</title>
-<meta name="description" content="One considered programme: apply, talk, baseline testing, a 60-minute consultation, a personal plan and a structured progress review. Doctor-led throughout.">
+<title>Prosper Clarity | Personalised Longevity Programme UK</title>
+<meta name="description" content="Prosper Clarity combines baseline testing, a 60-minute medical consultation, a personalised plan and a structured 45-minute progress review.">
 <link rel="canonical" href="https://prosper-clinic.com/how-it-works">
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta property="og:type" content="website">
-<meta property="og:title" content="How It Works | Prosper">
-<meta property="og:description" content="One considered programme: apply, talk, baseline testing, a 60-minute consultation, a personal plan and a structured progress review. Doctor-led throughout.">
+<meta property="og:title" content="Prosper Clarity | Personalised Longevity Programme UK">
+<meta property="og:description" content="Prosper Clarity combines baseline testing, a 60-minute medical consultation, a personalised plan and a structured 45-minute progress review.">
 <meta property="og:url" content="https://prosper-clinic.com/how-it-works">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -83,6 +83,10 @@ section{padding:96px 0}
 .section-head p{margin-top:18px;font-size:17px;color:var(--ink-soft);line-height:1.75}
 
 .why{background:var(--white)}
+.clarity-checklist{list-style:none;margin:22px 0 8px;max-width:640px}
+.clarity-checklist li{position:relative;padding:11px 0 11px 30px;border-top:1px solid rgba(26,24,21,.08);font-size:15.5px;color:var(--charcoal)}
+.clarity-checklist li:first-child{border-top:none}
+.clarity-checklist li::before{content:"✓";position:absolute;left:0;color:var(--gold-deep);font-weight:700}
 
 /* Doctor */
 .doctor{background:var(--white)}
@@ -110,6 +114,23 @@ section{padding:96px 0}
 
 .mid-cta{margin-top:44px;padding-top:40px;border-top:1px solid rgba(194,154,91,.22);display:flex;align-items:center;gap:28px;flex-wrap:wrap}
 .mid-cta p{font-family:var(--serif);font-style:italic;font-size:19px;color:rgba(244,239,230,.85);margin:0}
+
+/* Stepper */
+.stepper{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(194,154,91,.22)}
+.step-card{background:var(--charcoal-soft)}
+.step-card summary{list-style:none;cursor:pointer;padding:30px 26px;position:relative}
+.step-card summary::-webkit-details-marker{display:none}
+.step-card summary:focus-visible{outline:2px solid var(--gold);outline-offset:-2px}
+.step-card .step-num{font-family:var(--serif);font-size:32px;color:var(--gold);font-weight:500;line-height:1;display:block;margin-bottom:12px}
+.step-card summary h3{font-size:17px;color:var(--white);font-weight:600;margin:0 0 6px;display:block}
+.step-card summary .teaser{display:block;font-size:13.5px;color:rgba(244,239,230,.8);line-height:1.6;padding-right:20px}
+.step-card summary::after{content:"+";position:absolute;top:28px;right:22px;font-family:var(--serif);font-size:22px;color:var(--gold)}
+.step-card[open] summary::after{content:"–"}
+.step-card .step-detail{padding:0 26px 26px;font-size:13.5px;color:rgba(244,239,230,.85);line-height:1.7}
+.step-card .step-detail ul{margin:0 0 0 18px}
+.step-card .step-detail li{margin-bottom:6px}
+@media (max-width:920px){ .stepper{grid-template-columns:1fr 1fr} }
+@media (max-width:540px){ .stepper{grid-template-columns:1fr} }
 
 /* Lens */
 .lens-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
@@ -196,7 +217,7 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
   <div class="ticker-track" id="tickerTrack">
     <span>Doctor-led longevity &amp; performance medicine</span>
     <span>Founded by Dr George Collins</span>
-    <span>Based in Bath, United Kingdom</span>
+    <span>Supporting clients across the UK</span>
     <span>GMC-registered doctor</span>
     <span>Complimentary discovery call</span>
     <span>A personal plan, properly reviewed</span>
@@ -226,20 +247,55 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
   </div>
 </header>
 
-<!-- Steps 1-2 -->
-<section class="process" style="padding-bottom:0">
+<!-- Stepper -->
+<section class="process">
   <div class="container">
-    <div class="steps two reveal">
-      <div class="step">
-        <b>1</b>
-        <h3>Apply</h3>
-        <p>A short, non-clinical application. Two minutes, no medical detail.</p>
-      </div>
-      <div class="step">
-        <b>2</b>
-        <h3>Discovery call</h3>
-        <p>A complimentary 15-minute conversation with Dr George about what you are looking for and whether Prosper is the right fit. It is not a medical consultation, and there is no obligation.</p>
-      </div>
+    <div class="section-head reveal" style="margin-bottom:32px">
+      <p style="color:rgba(244,239,230,.75);margin:0">Nine steps. Tap any step for more detail.</p>
+    </div>
+    <div class="stepper reveal">
+      <details class="step-card">
+        <summary><span class="step-num">1</span><h3>Apply</h3><span class="teaser">A short, non-clinical application.</span></summary>
+        <div class="step-detail">Two minutes, no medical detail needed at this stage.</div>
+      </details>
+      <details class="step-card">
+        <summary><span class="step-num">2</span><h3>Discovery call</h3><span class="teaser">A complimentary 15-minute conversation with Dr George.</span></summary>
+        <div class="step-detail">About what you're looking for and whether Prosper is the right fit. Not a medical consultation, and no obligation.</div>
+      </details>
+      <details class="step-card">
+        <summary><span class="step-num">3</span><h3>Secure onboarding</h3><span class="teaser">A secure questionnaire, consent and confirmed fee.</span></summary>
+        <div class="step-detail">Completed privately away from the public website, with every expected cost set out clearly first.</div>
+      </details>
+      <details class="step-card">
+        <summary><span class="step-num">4</span><h3>Baseline testing</h3><span class="teaser">One baseline blood panel, close to home.</span></summary>
+        <div class="step-detail">Completed before your consultation, so the conversation starts informed rather than speculative.</div>
+      </details>
+      <details class="step-card">
+        <summary><span class="step-num">5</span><h3>The consultation</h3><span class="teaser">Sixty minutes with Dr George.</span></summary>
+        <div class="step-detail">Your history, goals, results and life, considered together as one connected picture, not a walkthrough of numbers.</div>
+      </details>
+      <details class="step-card">
+        <summary><span class="step-num">6</span><h3>Your Clarity Plan</h3><span class="teaser">A written, personal plan with clear priorities.</span></summary>
+        <div class="step-detail">
+          <ul>
+            <li>Honest, individual recommendations</li>
+            <li>Further testing split into recommended and optional</li>
+            <li>Every cost explained before you commit</li>
+          </ul>
+        </div>
+      </details>
+      <details class="step-card">
+        <summary><span class="step-num">7</span><h3>Implementation</h3><span class="teaser">Eight to twelve weeks of putting the plan to work.</span></summary>
+        <div class="step-detail">Completing any agreed investigations along the way.</div>
+      </details>
+      <details class="step-card">
+        <summary><span class="step-num">8</span><h3>Progress review</h3><span class="teaser">Forty-five minutes to review what changed.</span></summary>
+        <div class="step-detail">Symptoms, energy, recovery and results, with an updated plan to take away.</div>
+      </details>
+      <details class="step-card">
+        <summary><span class="step-num">9</span><h3>What comes next</h3><span class="teaser">A clear recommendation for what follows.</span></summary>
+        <div class="step-detail">An annual reassessment, or ongoing quarterly or six-monthly care through Prosper Continuum.</div>
+      </details>
     </div>
     <div class="mid-cta">
       <p>You can start here and read the rest later.</p>
@@ -251,41 +307,21 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
   </div>
 </section>
 
-<!-- Steps 3-8 -->
-<section class="process" style="padding-top:56px">
+<!-- What's included in Clarity -->
+<section class="why" style="padding-top:0">
   <div class="container">
-    <div class="steps six reveal">
-      <div class="step">
-        <b>3</b>
-        <h3>Secure onboarding</h3>
-        <p>If we both decide to proceed, you complete a secure clinical questionnaire and consent, away from the public website, and the programme fee is confirmed with all expected costs set out clearly.</p>
-      </div>
-      <div class="step">
-        <b>4</b>
-        <h3>Baseline testing</h3>
-        <p>One appropriate baseline blood panel, completed close to home before your first consultation, so the conversation starts informed rather than speculative.</p>
-      </div>
-      <div class="step">
-        <b>5</b>
-        <h3>The initial consultation</h3>
-        <p>Sixty minutes with Dr George. Your history, goals, results and life, considered together. A deep clinical review of you, not a walkthrough of numbers.</p>
-      </div>
-      <div class="step">
-        <b>6</b>
-        <h3>Your Clarity Plan</h3>
-        <p>A written, personal plan: clear priorities, honest recommendations, and any further testing divided into recommended and genuinely optional, with costs explained before you commit to anything.</p>
-      </div>
-      <div class="step">
-        <b>7</b>
-        <h3>Implementation</h3>
-        <p>Roughly eight to twelve weeks of putting the plan to work, completing any agreed investigations along the way.</p>
-      </div>
-      <div class="step">
-        <b>8</b>
-        <h3>Progress review</h3>
-        <p>Forty-five minutes to review what changed: symptoms, energy, recovery, results. You leave with an updated plan and a clear recommendation for what comes next.</p>
-      </div>
+    <div class="section-head reveal">
+      <div class="eyebrow">At a glance</div>
+      <h2>What's included in Clarity.</h2>
     </div>
+    <ul class="clarity-checklist reveal">
+      <li>Comprehensive baseline testing</li>
+      <li>60-minute doctor-led consultation</li>
+      <li>Individual health and treatment plan</li>
+      <li>8 to 12 week implementation period</li>
+      <li>45-minute progress review</li>
+      <li>A clear recommendation for what comes next</li>
+    </ul>
   </div>
 </section>
 
@@ -365,7 +401,7 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
 <!-- Credentials band -->
 <section class="credentials-band">
   <div class="container">
-    <div class="eyebrow">Professional Accreditations</div>
+    <div class="eyebrow">Training and professional affiliations</div>
     <p class="cred-sub">Education and professional training from leading UK institutions.</p>
     <div class="credentials-row">
       <div class="credential-plaque">
@@ -396,6 +432,9 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
         <a href="/how-it-works">How It Works</a>
         <a href="/for-coaches">For Coaches</a>
         <a href="/about">About</a>
+        <a href="/longevity-medicine-uk">Longevity Medicine UK</a>
+        <a href="/executive-health">Executive Health</a>
+        <a href="/insights">Insights</a>
         <a href="/privacy">Privacy Policy</a>
         <a href="/terms">Terms</a>
         <a href="/cancellations">Cancellations</a>
