@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Coaches | Prosper Performance</title>
-<meta name="description" content="Prosper Performance is the medical layer that sits alongside your coaching. Doctor-led insight for your clients, shared only with their explicit consent.">
+<title>Sports Performance Medicine for Athletes and Coaches | Prosper</title>
+<meta name="description" content="Prosper Performance provides doctor-led medical support alongside your coaching, for athletes and serious performers, shared only with explicit client consent.">
 <link rel="canonical" href="https://prosper-clinic.com/for-coaches">
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta property="og:type" content="website">
-<meta property="og:title" content="For Coaches | Prosper Performance">
-<meta property="og:description" content="Prosper Performance is the medical layer that sits alongside your coaching. Doctor-led insight for your clients, shared only with their explicit consent.">
+<meta property="og:title" content="Sports Performance Medicine for Athletes and Coaches | Prosper">
+<meta property="og:description" content="Prosper Performance provides doctor-led medical support alongside your coaching, for athletes and serious performers, shared only with explicit client consent.">
 <meta property="og:url" content="https://prosper-clinic.com/for-coaches">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -91,6 +91,13 @@ section{padding:96px 0}
 
 /* Coaches band */
 .coaches{background:var(--bone-deep)}
+.coach-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:8px}
+.coach-card{background:var(--white);border:1px solid rgba(26,24,21,.08);border-radius:var(--radius);padding:36px}
+.coach-card h3{font-size:20px;font-weight:600;margin-bottom:12px}
+.coach-card p{font-size:14.5px;color:var(--ink-soft);line-height:1.75}
+@media (max-width:920px){
+  .coach-grid{grid-template-columns:1fr}
+}
 
 /* Contact form */
 .contact-card{background:var(--white);border:1px solid rgba(26,24,21,.1);border-radius:var(--radius);padding:48px;max-width:620px;border-top:3px solid var(--gold)}
@@ -155,7 +162,7 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
   <div class="ticker-track" id="tickerTrack">
     <span>Doctor-led longevity &amp; performance medicine</span>
     <span>Founded by Dr George Collins</span>
-    <span>Based in Bath, United Kingdom</span>
+    <span>Supporting clients across the UK</span>
     <span>GMC-registered doctor</span>
     <span>Complimentary discovery call</span>
     <span>A personal plan, properly reviewed</span>
@@ -265,7 +272,7 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
 <!-- Credentials band -->
 <section class="credentials-band">
   <div class="container">
-    <div class="eyebrow">Professional Accreditations</div>
+    <div class="eyebrow">Training and professional affiliations</div>
     <p class="cred-sub">Education and professional training from leading UK institutions.</p>
     <div class="credentials-row">
       <div class="credential-plaque">
