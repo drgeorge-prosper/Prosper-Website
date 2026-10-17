@@ -85,14 +85,16 @@ nav{background:var(--bone);border-bottom:1px solid rgba(26,24,21,.08);position:s
 .nav-toggle{display:none;background:none;border:none;cursor:pointer;font-size:26px;color:var(--charcoal)}
 
 /* ---------- Hero ---------- */
-.hero{background:var(--charcoal);color:var(--bone);padding:110px 0 88px;position:relative;overflow:hidden}
+.hero{background:var(--charcoal);color:var(--bone);padding:72px 0 80px;position:relative;overflow:hidden}
 .hero::before{content:"";position:absolute;top:-200px;right:-200px;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle, rgba(194,154,91,.13) 0%, transparent 68%);pointer-events:none}
 .hero-inner{position:relative;z-index:1;max-width:900px}
 .hero .eyebrow{color:var(--gold)}
 .hero h1{font-size:clamp(42px,6.2vw,76px);font-weight:500;color:var(--white)}
 .hero h1 .rotator{display:inline-block;position:relative;color:var(--gold);font-style:italic;min-width:1ch;transition:opacity .45s ease, transform .45s ease}
 .hero h1 .rotator.is-out{opacity:0;transform:translateY(12px)}
-.hero-sub{font-size:18.5px;color:rgba(244,239,230,.86);max-width:620px;margin:28px 0 40px;line-height:1.7}
+.hero-sub{font-size:18.5px;color:rgba(244,239,230,.86);max-width:620px;margin:24px 0 32px;line-height:1.65}
+.hero-sub-2{margin-top:-20px}
+.hero .cta-subline{color:rgba(244,239,230,.75)}
 .hero-ctas{display:flex;flex-wrap:wrap;align-items:baseline;gap:16px 24px}
 
 /* ---------- Credibility strip ---------- */
@@ -220,7 +222,7 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
   .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bone);flex-direction:column;padding:24px;gap:20px;border-bottom:1px solid rgba(26,24,21,.1)}
   .nav-links.open{display:flex}
   .nav-toggle{display:block}
-  .hero{padding-top:72px}
+  .hero{padding-top:48px}
   .why-grid,.doc-grid{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr 1fr}
   section{padding:68px 0}
@@ -228,7 +230,35 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
 }
 @media (max-width:540px){
   .steps{grid-template-columns:1fr}
-  .hero h1{font-size:40px}
+  .hero h1{font-size:34px}
+  .hero{padding:28px 0 56px}
+  .hero .eyebrow{margin-bottom:12px;letter-spacing:0.16em}
+  .eyebrow-tail{display:none}
+  .hero-sub{font-size:16px;line-height:1.6;margin:14px 0 20px}
+  .hero-sub-2{display:none}
+  .hero-ctas{flex-direction:column;align-items:stretch;gap:14px}
+  .hero-ctas .btn{display:block;width:100%}
+  .hero .cta-subline{margin-top:8px;font-size:13.5px}
+}
+
+/* Who Prosper is for */
+.who-for{background:var(--white)}
+.who-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start}
+.who-for h2{font-size:clamp(30px,4vw,44px);font-weight:500}
+.who-list{margin-top:0}
+.who-list li{font-weight:400;color:var(--charcoal);border-top:1px solid rgba(26,24,21,.08);padding:12px 0 12px 26px}
+.who-list li:first-child{border-top:none}
+.who-list li::before{top:21px}
+.who-cta{margin-top:24px}
+
+/* Approach CTA */
+.process-cta{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px;margin-top:40px;padding-top:32px;border-top:1px solid rgba(194,154,91,.22)}
+.process-cta p{font-size:16.5px;color:rgba(244,239,230,.85);margin:0}
+@media (max-width:920px){
+  .who-grid{grid-template-columns:1fr;gap:20px}
+}
+@media (max-width:540px){
+  .process-cta .btn,.who-cta .btn{display:block;width:100%}
 }
 
 /* ---------- Italic serif accent utility ---------- */
@@ -244,6 +274,32 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
 @media (max-width:640px){
   .credential-plaque{min-width:0;flex:1 1 calc(50% - 20px);height:96px}
   .credential-plaque img{max-height:56px}
+}
+
+/* ---------- Conversion refresh: shared ---------- */
+.cta-short{display:none}
+.nav-book{display:none}
+.sticky-cta{display:none}
+@media (max-width:920px){
+  .nav-toggle{min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center;margin-right:-8px}
+  .nav-links{gap:0;padding:12px 24px 20px}
+  .nav-links a:not(.btn){display:block;width:100%;padding:12px 0;min-height:44px}
+  .nav-links a:not(.btn)::after{display:none}
+  .nav-links .btn{margin-top:10px;width:100%;min-height:44px}
+  .nav-book{display:inline-flex;align-items:center;margin-left:auto;margin-right:12px;padding:10px 16px;min-height:44px;font-size:13.5px}
+  .nav-links .cta-long{display:inline}
+  .nav-links .cta-short{display:none}
+  .foot-links{gap:4px 24px}
+  .foot-links a{display:inline-block;padding:10px 0;min-height:44px}
+}
+@media (max-width:920px){
+  body.has-sticky-cta footer{padding-bottom:calc(116px + env(safe-area-inset-bottom, 0px))}
+  .sticky-cta{display:block;position:fixed;left:0;right:0;bottom:0;z-index:90;background:rgba(26,24,21,.97);border-top:1px solid rgba(194,154,91,.35);padding:10px 16px calc(10px + env(safe-area-inset-bottom, 0px));transform:translateY(110%);transition:transform .3s ease}
+  .sticky-cta.show{transform:none}
+  .sticky-cta .btn{display:block;width:100%;padding:13px 16px;min-height:48px}
+}
+@media (max-width:920px) and (prefers-reduced-motion: reduce){
+  .sticky-cta{transition:none}
 }
 </style>
 </head>
@@ -265,12 +321,13 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
 <nav>
   <div class="nav-inner">
     <a href="/" class="logo">PROSPER<span>.</span></a>
-    <button class="nav-toggle" id="navToggle" aria-label="Open menu">☰</button>
+    <a href="/apply" class="btn btn-gold nav-book" data-cta="nav_mobile">Book a call</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">☰</button>
     <div class="nav-links" id="navLinks">
       <a href="/how-it-works">How It Works</a>
-      <a href="/for-coaches">For Coaches</a>
       <a href="/about">About</a>
-      <a href="/apply" class="btn btn-gold">Apply to Prosper</a>
+      <a href="/for-coaches">For Coaches</a>
+      <a href="/apply" class="btn btn-gold" data-cta="nav"><span class="cta-long">Book a discovery call</span><span class="cta-short">Book a call</span></a>
     </div>
   </div>
 </nav>
@@ -278,14 +335,14 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
 <!-- Hero -->
 <header class="hero">
   <div class="container hero-inner">
-    <div class="eyebrow">Doctor-led longevity &amp; performance medicine · United Kingdom</div>
+    <div class="eyebrow">Doctor-led longevity &amp; performance medicine<span class="eyebrow-tail"> · United Kingdom</span></div>
     <h1>The clinical picture behind<br><span class="rotator" id="rotator">your next decade.</span></h1>
     <p class="hero-sub">A personalised longevity and performance programme led by Dr George Collins, a GMC-registered doctor working across Sports and Exercise Medicine, professional rugby and longevity medical education.</p>
-    <p class="hero-sub" style="margin-top:-24px">Baseline testing, expert clinical interpretation and a plan built around how you want to feel, perform and age.</p>
+    <p class="hero-sub hero-sub-2">Baseline testing, expert clinical interpretation and a plan built around how you want to feel, perform and age.</p>
     <div class="hero-ctas">
       <div>
-        <a href="/apply" class="btn btn-gold">Apply to Prosper</a>
-        <div class="cta-subline">A two-minute application, then a complimentary 15-minute call with Dr George.</div>
+        <a href="/apply" class="btn btn-gold" data-cta="hero">Book a discovery call</a>
+        <div class="cta-subline">A complimentary 15-minute phone call with Dr George. No obligation.</div>
       </div>
       <a href="/how-it-works" class="btn btn-outline-light">How it works</a>
     </div>
@@ -308,7 +365,7 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
 <!-- Answer-first -->
 <section class="answer-first">
   <div class="container">
-    <p>Prosper is a private, doctor-led longevity and performance practice founded by Dr George Collins, supporting clients across the UK. We work with people whose questions deserve more than a rushed appointment: energy that is not what it was, recovery that lags behind effort, a family history that plays on your mind, or simply the intention to age well and stay capable. It starts with an application and a short conversation, not a test kit.</p>
+    <p>Prosper is a private, doctor-led longevity and performance practice founded by Dr George Collins, supporting clients across the UK. We work with people whose questions deserve more than a rushed appointment: energy that is not what it was, recovery that lags behind effort, a family history that plays on your mind, or simply the intention to age well and stay capable. It starts with a short phone conversation, not a test kit.</p>
   </div>
 </section>
 
@@ -343,6 +400,30 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
           <li>Long-term prevention</li>
         </ul>
       </aside>
+    </div>
+  </div>
+</section>
+
+<!-- Who Prosper is for -->
+<section class="who-for">
+  <div class="container">
+    <div class="who-grid">
+      <div class="reveal">
+        <div class="eyebrow">Who Prosper is for</div>
+        <h2>For people who carry a lot, and intend to keep carrying it well.</h2>
+      </div>
+      <div class="reveal">
+        <ul class="recognition-list who-list">
+          <li>Business owners, founders and executives in their forties to sixties</li>
+          <li>You want to stay sharp, strong and ahead of your health, not wait for a problem</li>
+          <li>You value a doctor's judgement over a dashboard of numbers</li>
+          <li>You want a clear plan that fits a demanding diary</li>
+        </ul>
+        <div class="who-cta">
+          <a href="/apply" class="btn btn-gold" data-cta="who_for">Book a discovery call</a>
+          <div class="cta-subline">A complimentary 15-minute phone call with Dr George. No obligation.</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -388,8 +469,8 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
     </ul>
     <p class="money-line">Prosper is a private, self-funded service. The recommended pathway and all expected costs are explained clearly before you decide whether to proceed.</p>
     <div>
-      <a href="/apply" class="btn btn-gold">Apply to Prosper</a>
-      <div class="cta-subline">A two-minute application, then a complimentary 15-minute call with Dr George.</div>
+      <a href="/apply" class="btn btn-gold" data-cta="programme">Book a discovery call</a>
+      <div class="cta-subline">A complimentary 15-minute phone call with Dr George. No obligation.</div>
     </div>
     <p style="margin-top:20px;font-size:14px;color:var(--ink-soft)">Every programme ends with a clear recommendation for what comes next. <a href="/prosper-continuum" style="text-decoration:underline;color:var(--gold-deep)">See Prosper Continuum</a>.</p>
   </div>
@@ -425,6 +506,10 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
         <p>A written, personal plan, then a proper review eight to twelve weeks later.</p>
       </div>
     </div>
+    <div class="process-cta reveal">
+      <p>It starts with a short phone call, so you can ask your questions first.</p>
+      <a href="/apply" class="btn btn-gold" data-cta="approach">Book a discovery call</a>
+    </div>
   </div>
 </section>
 
@@ -446,7 +531,7 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
 <section class="why" style="background:var(--bone)">
   <div class="container">
     <div class="section-head reveal">
-      <div class="eyebrow">Before you apply</div>
+      <div class="eyebrow">Before you book</div>
       <h2>FAQ's</h2>
     </div>
     <div class="faq reveal">
@@ -483,11 +568,11 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
   <div class="container reveal">
     <div class="eyebrow">Begin with a conversation</div>
     <h2>Begin with a conversation.</h2>
-    <p>A short application, then a complimentary 15-minute discovery call. No obligation, no medical questionnaire at this stage. And if Prosper is not the right fit for you, Dr George will tell you so on the call.</p>
+    <p>A complimentary 15-minute discovery call by phone. No obligation, no medical questionnaire at this stage. And if Prosper is not the right fit for you, Dr George will tell you so on the call.</p>
     <p style="font-family:var(--serif);font-style:italic;color:var(--gold);max-width:560px;margin:0 auto 32px">Prosper is a private, self-funded service. The recommended pathway and all expected costs are explained clearly before you decide whether to proceed.</p>
     <div class="cta-btns">
-      <a href="/apply" class="btn btn-gold">Apply to Prosper</a>
-      <div class="cta-subline">A two-minute application, then a complimentary 15-minute call with Dr George.</div>
+      <a href="/apply" class="btn btn-gold" data-cta="final_cta">Book a discovery call</a>
+      <div class="cta-subline">A complimentary 15-minute phone call with Dr George. No obligation.</div>
     </div>
   </div>
 </section>
@@ -539,7 +624,13 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
   </div>
 </footer>
 
+<!-- Mobile sticky booking bar -->
+<div class="sticky-cta" id="stickyCta">
+  <a href="/apply" class="btn btn-gold" data-cta="sticky_bar">Book a complimentary discovery call</a>
+</div>
+
 <script src="/site-config.js"></script>
+<script src="/prosper-track.js"></script>
 <script>
 // Hero word rotator
 (function(){
@@ -567,7 +658,8 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
 
 // Mobile nav
 document.getElementById('navToggle').addEventListener('click', function(){
-  document.getElementById('navLinks').classList.toggle('open');
+  var open = document.getElementById('navLinks').classList.toggle('open');
+  this.setAttribute('aria-expanded', open ? 'true' : 'false');
 });
 
 // Scroll reveal
@@ -583,6 +675,15 @@ document.getElementById('navToggle').addEventListener('click', function(){
     });
   }, {threshold: 0.12, rootMargin: '0px 0px -60px 0px'});
   items.forEach(function(el){ io.observe(el); });
+})();
+// Mobile sticky booking bar: appears once the visitor scrolls past the first screen.
+(function(){
+  var bar = document.getElementById('stickyCta');
+  if (!bar) return;
+  document.body.classList.add('has-sticky-cta');
+  function update(){ bar.classList.toggle('show', window.scrollY > window.innerHeight * 0.6); }
+  window.addEventListener('scroll', update, {passive:true});
+  update();
 })();
 </script>
 </body>

@@ -110,6 +110,23 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
   .nav-toggle{display:block}
   section{padding:68px 0}
 }
+
+/* ---------- Conversion refresh: shared ---------- */
+.cta-short{display:none}
+.nav-book{display:none}
+.sticky-cta{display:none}
+@media (max-width:920px){
+  .nav-toggle{min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center;margin-right:-8px}
+  .nav-links{gap:0;padding:12px 24px 20px}
+  .nav-links a:not(.btn){display:block;width:100%;padding:12px 0;min-height:44px}
+  .nav-links a:not(.btn)::after{display:none}
+  .nav-links .btn{margin-top:10px;width:100%;min-height:44px}
+  .nav-book{display:inline-flex;align-items:center;margin-left:auto;margin-right:12px;padding:10px 16px;min-height:44px;font-size:13.5px}
+  .nav-links .cta-long{display:inline}
+  .nav-links .cta-short{display:none}
+  .foot-links{gap:4px 24px}
+  .foot-links a{display:inline-block;padding:10px 0;min-height:44px}
+}
 </style>
 </head>
 <body>
@@ -128,12 +145,13 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
 <nav>
   <div class="nav-inner">
     <a href="/" class="logo">PROSPER<span>.</span></a>
-    <button class="nav-toggle" id="navToggle" aria-label="Open menu">☰</button>
+    <a href="/apply" class="btn btn-gold nav-book" data-cta="nav_mobile">Book a call</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">☰</button>
     <div class="nav-links" id="navLinks">
       <a href="/how-it-works">How It Works</a>
-      <a href="/for-coaches">For Coaches</a>
       <a href="/about">About</a>
-      <a href="/apply" class="btn btn-gold">Apply to Prosper</a>
+      <a href="/for-coaches">For Coaches</a>
+      <a href="/apply" class="btn btn-gold" data-cta="nav"><span class="cta-long">Book a discovery call</span><span class="cta-short">Book a call</span></a>
     </div>
   </div>
 </nav>
@@ -182,13 +200,15 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
   </div>
 </footer>
 
+<script src="/prosper-track.js"></script>
 <script>
 (function(){
   var track = document.getElementById('tickerTrack');
   track.innerHTML += track.innerHTML;
 })();
 document.getElementById('navToggle').addEventListener('click', function(){
-  document.getElementById('navLinks').classList.toggle('open');
+  var open = document.getElementById('navLinks').classList.toggle('open');
+  this.setAttribute('aria-expanded', open ? 'true' : 'false');
 });
 </script>
 </body>
