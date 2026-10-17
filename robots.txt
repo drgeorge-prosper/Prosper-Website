@@ -1,3 +1,4 @@
+# AI search and assistant crawlers are explicitly welcome. Only the booking step is excluded.
 User-agent: *
 Allow: /
 Disallow: /apply/book
@@ -11,6 +12,46 @@ Allow: /
 Disallow: /apply/book
 
 User-agent: OAI-SearchBot
+Allow: /
+Disallow: /apply/book
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /apply/book
+
+User-agent: GPTBot
+Allow: /
+Disallow: /apply/book
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /apply/book
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /apply/book
+
+User-agent: Claude-User
+Allow: /
+Disallow: /apply/book
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /apply/book
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /apply/book
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /apply/book
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /apply/book
+
+User-agent: DuckAssistBot
 Allow: /
 Disallow: /apply/book
 

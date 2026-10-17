@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://prosper-clinic.com/</loc></url>
-  <url><loc>https://prosper-clinic.com/how-it-works</loc></url>
-  <url><loc>https://prosper-clinic.com/for-coaches</loc></url>
-  <url><loc>https://prosper-clinic.com/about</loc></url>
-  <url><loc>https://prosper-clinic.com/apply</loc></url>
-  <url><loc>https://prosper-clinic.com/longevity-medicine-uk</loc></url>
-  <url><loc>https://prosper-clinic.com/executive-health</loc></url>
-  <url><loc>https://prosper-clinic.com/prosper-continuum</loc></url>
-  <url><loc>https://prosper-clinic.com/insights</loc></url>
-  <url><loc>https://prosper-clinic.com/privacy</loc></url>
-  <url><loc>https://prosper-clinic.com/terms</loc></url>
-  <url><loc>https://prosper-clinic.com/cancellations</loc></url>
+  <!-- Format for new pages. Add new content pages above the legal pages. Set lastmod to the date of the last real content change.
+       <url><loc>https://prosper-clinic.com/new-page-slug</loc><lastmod>YYYY-MM-DD</lastmod></url>
+       Use extensionless URLs that match the page canonical. Leave out noindex pages (/packages, /apply/book). -->
+  <url><loc>https://prosper-clinic.com/</loc><lastmod>2026-10-17</lastmod></url>
+  <url><loc>https://prosper-clinic.com/how-it-works</loc><lastmod>2026-10-17</lastmod></url>
+  <url><loc>https://prosper-clinic.com/about</loc><lastmod>2026-10-17</lastmod></url>
+  <url><loc>https://prosper-clinic.com/longevity-medicine-uk</loc><lastmod>2026-10-17</lastmod></url>
+  <url><loc>https://prosper-clinic.com/executive-health</loc><lastmod>2026-10-17</lastmod></url>
+  <url><loc>https://prosper-clinic.com/for-coaches</loc><lastmod>2026-10-17</lastmod></url>
+  <url><loc>https://prosper-clinic.com/prosper-continuum</loc><lastmod>2026-10-17</lastmod></url>
+  <url><loc>https://prosper-clinic.com/insights</loc><lastmod>2026-10-17</lastmod></url>
+  <url><loc>https://prosper-clinic.com/apply</loc><lastmod>2026-10-17</lastmod></url>
+  <url><loc>https://prosper-clinic.com/privacy</loc><lastmod>2026-10-17</lastmod></url>
+  <url><loc>https://prosper-clinic.com/terms</loc><lastmod>2026-10-17</lastmod></url>
+  <url><loc>https://prosper-clinic.com/cancellations</loc><lastmod>2026-10-17</lastmod></url>
 </urlset>

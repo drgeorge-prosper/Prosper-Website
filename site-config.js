@@ -4,6 +4,8 @@ window.PROSPER_CONFIG = {
   APPLICATION_FORM_ENDPOINT: "https://formspree.io/f/xvzerwyv",
   PRIORITY_LIST_ENDPOINT: "https://formspree.io/f/xvzerwyv",
   SHOW_PUBLIC_PRICE_GUIDE: false,
+  // Read by analytics-loader.js. ANALYTICS_PROVIDER: null, "cloudflare" or "plausible".
+  // "cloudflare" needs ANALYTICS_ID set to the Web Analytics beacon token. "plausible" needs no ID.
   ANALYTICS_PROVIDER: null,
   ANALYTICS_ID: null
 };
