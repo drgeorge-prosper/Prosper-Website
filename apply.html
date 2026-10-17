@@ -83,7 +83,7 @@ nav{background:var(--bone);border-bottom:1px solid rgba(26,24,21,.08);position:s
 .book{padding:0 0 72px}
 .book-grid{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:32px;align-items:start;margin-top:-80px;position:relative;z-index:2}
 .calendly-wrap{background:var(--white);border:1px solid rgba(26,24,21,.1);border-radius:var(--radius);overflow:hidden;min-width:0}
-.calendly-inline-widget{min-width:280px;width:100%;height:720px}
+.calendly-inline-widget{min-width:280px;width:100%;height:720px;min-height:720px !important}
 .calendly-inline-widget iframe{display:block}
 .book-fallback{font-size:14.5px;color:var(--ink-soft);margin-top:14px;text-align:center}
 .book-fallback a{color:var(--gold-deep);text-decoration:underline;word-break:break-word}
@@ -137,7 +137,7 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
   .book-hero h1{font-size:32px}
   .book-hero p{font-size:16px;margin-top:8px}
   .book-grid{margin-top:-56px}
-  .calendly-inline-widget{height:900px}
+  .calendly-inline-widget{height:900px;min-height:900px !important}
   .book-aside{padding:24px 20px}
 }
 
@@ -190,7 +190,7 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
           <p>Dr George will call you at the time you chose. A confirmation email is on its way.</p>
         </div>
         <div class="calendly-wrap">
-          <div class="calendly-inline-widget" id="calendlyWidget" data-resize="true"></div>
+          <div class="calendly-inline-widget" id="calendlyWidget"></div>
           <div class="cal-unavailable" id="calUnavailable">The booking calendar has not loaded. Please email <a href="mailto:drgeorge@prosper-clinic.com">drgeorge@prosper-clinic.com</a> and we will find a time together.</div>
         </div>
         <p class="book-fallback">Can't find a time? Email <a href="mailto:drgeorge@prosper-clinic.com">drgeorge@prosper-clinic.com</a></p>
