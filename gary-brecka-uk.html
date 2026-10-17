@@ -21,118 +21,278 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": [
+    "MedicalBusiness",
+    "MedicalClinic"
+   ],
+   "@id": "https://prosper-clinic.com/#org",
+   "name": "Prosper",
+   "alternateName": "Prosper Clinic",
+   "legalName": "Dr G Collins Ltd",
+   "url": "https://prosper-clinic.com/",
+   "email": "drgeorge@prosper-clinic.com",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://prosper-clinic.com/apple-touch-icon.png"
+   },
+   "image": "https://prosper-clinic.com/dr-george-hero.jpg",
+   "description": "Prosper is a private, doctor-led longevity and performance medicine practice founded by Dr George Collins. Clients across the UK receive a comprehensive blood panel, a doctor consultation, a written plan and structured follow-up.",
+   "areaServed": {
+    "@type": "Country",
+    "name": "United Kingdom",
+    "identifier": "GB"
+   },
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "71-75 Shelton Street, Covent Garden",
+    "addressLocality": "London",
+    "postalCode": "WC2H 9JQ",
+    "addressCountry": "GB"
+   },
+   "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "Companies House company number",
+    "value": "16388031"
+   },
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "enquiries",
+    "email": "drgeorge@prosper-clinic.com",
+    "areaServed": "GB",
+    "availableLanguage": "en-GB"
+   },
+   "founder": {
+    "@id": "https://prosper-clinic.com/#dr-george"
+   },
+   "knowsAbout": [
+    "Longevity medicine",
+    "Performance medicine",
+    "Sports and Exercise Medicine",
+    "Blood test interpretation",
+    "Executive health",
+    "Preventive health"
+   ],
+   "inLanguage": "en-GB"
+  },
+  {
+   "@type": [
+    "Person",
+    "Physician"
+   ],
+   "@id": "https://prosper-clinic.com/#dr-george",
+   "name": "Dr George Collins",
+   "honorificPrefix": "Dr",
+   "givenName": "George",
+   "familyName": "Collins",
+   "jobTitle": "Performance and longevity doctor",
+   "description": "Dr George Collins is a UK performance and longevity doctor and the founder of Prosper. He is a GMC-registered doctor with a background in Emergency Medicine and Sports and Exercise Medicine, and works as an Immediate Care Doctor in professional rugby.",
+   "url": "https://prosper-clinic.com/about",
+   "image": "https://prosper-clinic.com/dr-george.jpg",
+   "worksFor": {
+    "@id": "https://prosper-clinic.com/#org"
+   },
+   "affiliation": [
     {
-      "@type": "WebPage",
-      "@id": "https://prosper-clinic.com/gary-brecka-uk#webpage",
-      "url": "https://prosper-clinic.com/gary-brecka-uk",
-      "name": "A Gary Brecka-Style Doctor in the UK | Prosper",
-      "description": "Looking for a UK doctor like Gary Brecka? Here is what a GMC-registered, doctor-led approach looks like, and how Dr George Collins works.",
-      "inLanguage": "en-GB",
-      "breadcrumb": {
-        "@id": "https://prosper-clinic.com/gary-brecka-uk#breadcrumb"
-      },
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "url": "https://prosper-clinic.com/dr-george-hero.jpg"
-      },
-      "dateModified": "2026-10-17"
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://prosper-clinic.com/gary-brecka-uk#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://prosper-clinic.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Insights",
-          "item": "https://prosper-clinic.com/insights"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Gary Brecka-style doctor",
-          "item": "https://prosper-clinic.com/gary-brecka-uk"
-        }
-      ]
-    },
-    {
-      "@type": "Article",
-      "@id": "https://prosper-clinic.com/gary-brecka-uk#article",
-      "headline": "Looking for a Gary Brecka-style doctor in the UK?",
-      "description": "Looking for a UK doctor like Gary Brecka? Here is what a GMC-registered, doctor-led approach looks like, and how Dr George Collins works.",
-      "mainEntityOfPage": {
-        "@id": "https://prosper-clinic.com/gary-brecka-uk#webpage"
-      },
-      "author": {
-        "@id": "https://prosper-clinic.com/#dr-george"
-      },
-      "publisher": {
-        "@id": "https://prosper-clinic.com/#org"
-      },
-      "image": "https://prosper-clinic.com/dr-george-hero.jpg",
-      "inLanguage": "en-GB",
-      "datePublished": "2026-10-17",
-      "dateModified": "2026-10-17"
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://prosper-clinic.com/gary-brecka-uk#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Is Prosper connected to Gary Brecka?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. Prosper is an independent UK practice run by Dr George Collins and is not affiliated with or endorsed by Gary Brecka or any US service."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I see a performance doctor like this if I live outside London?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Consultations are mostly virtual across the UK, and the blood draw is arranged at home. In-person appointments are available in Bath."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I check that a UK doctor is GMC-registered?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Search the GMC's online register by name or GMC number. The register is public, and the details should match the doctor you are speaking to."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Will I get the same programme a US service offers?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Prosper does not copy any other service. Dr George builds each plan around your own results, history and goals, within UK medical practice, so what you receive is personal rather than a template."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What does it cost?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Prosper is a private, self-funded service. The recommended pathway and all expected costs are explained clearly on your discovery call."
-          }
-        }
-      ]
+     "@type": "Organization",
+     "name": "Apex Longevity Academy"
     }
-  ]
-}
-</script>
+   ],
+   "medicalSpecialty": [
+    "Emergency",
+    "PrimaryCare",
+    "Musculoskeletal"
+   ],
+   "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "GMC reference number",
+    "value": "7658884"
+   },
+   "hasCredential": [
+    {
+     "@type": "EducationalOccupationalCredential",
+     "name": "GMC-registered doctor",
+     "credentialCategory": "Professional registration",
+     "recognizedBy": {
+      "@type": "Organization",
+      "name": "General Medical Council",
+      "url": "https://www.gmc-uk.org/"
+     }
+    },
+    {
+     "@type": "EducationalOccupationalCredential",
+     "name": "MBChB",
+     "credentialCategory": "degree"
+    },
+    {
+     "@type": "EducationalOccupationalCredential",
+     "name": "BSc (Hons)",
+     "credentialCategory": "degree"
+    },
+    {
+     "@type": "EducationalOccupationalCredential",
+     "name": "Postgraduate Diploma in Sports and Exercise Medicine",
+     "credentialCategory": "diploma"
+    },
+    {
+     "@type": "EducationalOccupationalCredential",
+     "name": "Diploma of the Faculty of Sport and Exercise Medicine (DipFSEM)",
+     "credentialCategory": "diploma"
+    },
+    {
+     "@type": "EducationalOccupationalCredential",
+     "name": "Membership of the Faculty of Sport and Exercise Medicine (MFSEM), both parts",
+     "credentialCategory": "professional qualification"
+    }
+   ],
+   "alumniOf": [
+    {
+     "@type": "CollegeOrUniversity",
+     "name": "University of Bath"
+    },
+    {
+     "@type": "CollegeOrUniversity",
+     "name": "University of Nottingham"
+    },
+    {
+     "@type": "CollegeOrUniversity",
+     "name": "University of Birmingham"
+    }
+   ],
+   "knowsAbout": [
+    "Longevity medicine",
+    "Performance medicine",
+    "Sports and Exercise Medicine",
+    "Emergency Medicine",
+    "Blood test interpretation",
+    "Cardiovascular and metabolic risk",
+    "Hormonal health"
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://prosper-clinic.com/#website",
+   "url": "https://prosper-clinic.com/",
+   "name": "Prosper",
+   "alternateName": "Prosper Clinic",
+   "inLanguage": "en-GB",
+   "publisher": {
+    "@id": "https://prosper-clinic.com/#org"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://prosper-clinic.com/gary-brecka-uk#webpage",
+   "url": "https://prosper-clinic.com/gary-brecka-uk",
+   "name": "A Gary Brecka-Style Doctor in the UK | Prosper",
+   "description": "Looking for a UK doctor like Gary Brecka? Here is what a GMC-registered, doctor-led approach looks like, and how Dr George Collins works.",
+   "inLanguage": "en-GB",
+   "breadcrumb": {
+    "@id": "https://prosper-clinic.com/gary-brecka-uk#breadcrumb"
+   },
+   "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": "https://prosper-clinic.com/dr-george-hero.jpg"
+   },
+   "dateModified": "2026-10-17",
+   "isPartOf": {
+    "@id": "https://prosper-clinic.com/#website"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://prosper-clinic.com/gary-brecka-uk#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://prosper-clinic.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Insights",
+     "item": "https://prosper-clinic.com/insights"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Gary Brecka-style doctor",
+     "item": "https://prosper-clinic.com/gary-brecka-uk"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "@id": "https://prosper-clinic.com/gary-brecka-uk#article",
+   "headline": "Looking for a Gary Brecka-style doctor in the UK?",
+   "description": "Looking for a UK doctor like Gary Brecka? Here is what a GMC-registered, doctor-led approach looks like, and how Dr George Collins works.",
+   "mainEntityOfPage": {
+    "@id": "https://prosper-clinic.com/gary-brecka-uk#webpage"
+   },
+   "author": {
+    "@id": "https://prosper-clinic.com/#dr-george"
+   },
+   "publisher": {
+    "@id": "https://prosper-clinic.com/#org"
+   },
+   "image": "https://prosper-clinic.com/dr-george-hero.jpg",
+   "inLanguage": "en-GB",
+   "datePublished": "2026-10-17",
+   "dateModified": "2026-10-17"
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://prosper-clinic.com/gary-brecka-uk#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Is Prosper connected to Gary Brecka?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Prosper is an independent UK practice run by Dr George Collins and is not affiliated with or endorsed by Gary Brecka or any US service."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I see a performance doctor like this if I live outside London?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Consultations are mostly virtual across the UK, and the blood draw is arranged at home. In-person appointments are available in Bath."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do I check that a UK doctor is GMC-registered?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Search the GMC's online register by name or GMC number. The register is public, and the details should match the doctor you are speaking to."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Will I get the same programme a US service offers?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Prosper does not copy any other service. Dr George builds each plan around your own results, history and goals, within UK medical practice, so what you receive is personal rather than a template."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What does it cost?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Prosper is a private, self-funded service. The recommended pathway and all expected costs are explained clearly on your discovery call."
+     }
+    }
+   ]
+  }
+ ]
+}</script>
 <style>
 :root{
   --charcoal:#1A1815;--charcoal-soft:#2A2723;--gold:#C29A5B;--gold-deep:#A87F42;
@@ -305,7 +465,7 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
 <h2>What a UK doctor-led approach involves</h2>
 <p>In the UK, doctors who practise medicine are registered with the General Medical Council. You can check any doctor's registration yourself on the GMC's public online register, using their name or GMC number. A doctor should be happy to share it.</p><p>Registration brings professional accountability. Your results are read by a named, regulated doctor who is responsible for the advice given. Blood samples are analysed by a partner laboratory, and anything involving prescribing sits within UK medicines rules and requires a separate formal consultation.</p><p>It also means working alongside the NHS. Where a result needs GP review, a UK doctor tells you so and explains why.</p>
 <h2>How Prosper fits</h2>
-<p>Dr George holds an MBChB and a BSc (Hons), a PGDip and DipFSEM in Sports and Exercise Medicine, and both parts of the MFSEM, with a background in Emergency Medicine. He is Immediate Care Doctor for Bath Rugby and is completing an MSc in Sports and Exercise Medicine at the University of Bath. More is on the <a href="/about">about page</a>.</p><p>Prosper Clarity is the flagship programme. It combines a comprehensive blood panel via a partner laboratory with home phlebotomy, a pre-prepared review, a 60-minute doctor consultation, a detailed written report, a personalised action plan and a 45-minute follow-up. Consultations are mostly virtual across the UK, so you do not need to be in London, and in person in Bath. The steps are laid out under <a href="/how-it-works">how it works</a>.</p><p>Ongoing support is available afterwards through <a href="/prosper-continuum">Prosper Continuum</a>.</p>
+<p>Dr George holds an MBChB and a BSc (Hons), a PGDip and DipFSEM in Sports and Exercise Medicine, and both parts of the MFSEM, with a background in Emergency Medicine. He works as an Immediate Care Doctor in professional rugby and is completing an MSc in Sports and Exercise Medicine at the University of Bath. More is on the <a href="/about">about page</a>.</p><p>Prosper Clarity is the flagship programme. It combines a comprehensive blood panel via a partner laboratory with home phlebotomy, a pre-prepared review, a 60-minute doctor consultation, a detailed written report, a personalised action plan and a 45-minute follow-up. Consultations are mostly virtual across the UK, so you do not need to be in London, and in person in Bath. The steps are laid out under <a href="/how-it-works">how it works</a>.</p><p>Ongoing support is available afterwards through <a href="/prosper-continuum">Prosper Continuum</a>.</p>
 <h2>What a first conversation looks like</h2>
 <p>Everything starts with a complimentary 15-minute telephone discovery call with Dr George. It is not a medical consultation and there is no obligation. You talk about what you are looking for, and he tells you honestly whether Prosper is the right fit. If it is not, he will say so.</p><p>You can book it through the <a href="/apply">apply</a> page, and the recommended pathway is explained there and then.</p>
 <h2>Questions worth asking any doctor</h2>

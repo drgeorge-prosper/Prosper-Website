@@ -21,118 +21,278 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": [
+    "MedicalBusiness",
+    "MedicalClinic"
+   ],
+   "@id": "https://prosper-clinic.com/#org",
+   "name": "Prosper",
+   "alternateName": "Prosper Clinic",
+   "legalName": "Dr G Collins Ltd",
+   "url": "https://prosper-clinic.com/",
+   "email": "drgeorge@prosper-clinic.com",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://prosper-clinic.com/apple-touch-icon.png"
+   },
+   "image": "https://prosper-clinic.com/dr-george-hero.jpg",
+   "description": "Prosper is a private, doctor-led longevity and performance medicine practice founded by Dr George Collins. Clients across the UK receive a comprehensive blood panel, a doctor consultation, a written plan and structured follow-up.",
+   "areaServed": {
+    "@type": "Country",
+    "name": "United Kingdom",
+    "identifier": "GB"
+   },
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "71-75 Shelton Street, Covent Garden",
+    "addressLocality": "London",
+    "postalCode": "WC2H 9JQ",
+    "addressCountry": "GB"
+   },
+   "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "Companies House company number",
+    "value": "16388031"
+   },
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "enquiries",
+    "email": "drgeorge@prosper-clinic.com",
+    "areaServed": "GB",
+    "availableLanguage": "en-GB"
+   },
+   "founder": {
+    "@id": "https://prosper-clinic.com/#dr-george"
+   },
+   "knowsAbout": [
+    "Longevity medicine",
+    "Performance medicine",
+    "Sports and Exercise Medicine",
+    "Blood test interpretation",
+    "Executive health",
+    "Preventive health"
+   ],
+   "inLanguage": "en-GB"
+  },
+  {
+   "@type": [
+    "Person",
+    "Physician"
+   ],
+   "@id": "https://prosper-clinic.com/#dr-george",
+   "name": "Dr George Collins",
+   "honorificPrefix": "Dr",
+   "givenName": "George",
+   "familyName": "Collins",
+   "jobTitle": "Performance and longevity doctor",
+   "description": "Dr George Collins is a UK performance and longevity doctor and the founder of Prosper. He is a GMC-registered doctor with a background in Emergency Medicine and Sports and Exercise Medicine, and works as an Immediate Care Doctor in professional rugby.",
+   "url": "https://prosper-clinic.com/about",
+   "image": "https://prosper-clinic.com/dr-george.jpg",
+   "worksFor": {
+    "@id": "https://prosper-clinic.com/#org"
+   },
+   "affiliation": [
     {
-      "@type": "WebPage",
-      "@id": "https://prosper-clinic.com/longevity-doctor-bath#webpage",
-      "url": "https://prosper-clinic.com/longevity-doctor-bath",
-      "name": "Longevity Doctor in Bath and Bristol | Prosper",
-      "description": "Dr George Collins offers longevity and performance medicine with in-person appointments in Bath and video consultations for Bristol and beyond.",
-      "inLanguage": "en-GB",
-      "breadcrumb": {
-        "@id": "https://prosper-clinic.com/longevity-doctor-bath#breadcrumb"
-      },
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "url": "https://prosper-clinic.com/dr-george-hero.jpg"
-      },
-      "dateModified": "2026-10-17"
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://prosper-clinic.com/longevity-doctor-bath#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://prosper-clinic.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Insights",
-          "item": "https://prosper-clinic.com/insights"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Longevity doctor Bath and Bristol",
-          "item": "https://prosper-clinic.com/longevity-doctor-bath"
-        }
-      ]
-    },
-    {
-      "@type": "Article",
-      "@id": "https://prosper-clinic.com/longevity-doctor-bath#article",
-      "headline": "Longevity and performance doctor in Bath and Bristol",
-      "description": "Dr George Collins offers longevity and performance medicine with in-person appointments in Bath and video consultations for Bristol and beyond.",
-      "mainEntityOfPage": {
-        "@id": "https://prosper-clinic.com/longevity-doctor-bath#webpage"
-      },
-      "author": {
-        "@id": "https://prosper-clinic.com/#dr-george"
-      },
-      "publisher": {
-        "@id": "https://prosper-clinic.com/#org"
-      },
-      "image": "https://prosper-clinic.com/dr-george-hero.jpg",
-      "inLanguage": "en-GB",
-      "datePublished": "2026-10-17",
-      "dateModified": "2026-10-17"
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://prosper-clinic.com/longevity-doctor-bath#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Can I meet Dr George in person?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. In-person appointments are available in Bath. Most consultations are virtual, and you can choose whichever suits you."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do I need to live in Bath or Bristol?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. Prosper supports clients across the UK, with consultations mostly by video and the blood draw arranged at home."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is Prosper only for athletes?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. Dr George's sport and exercise medicine training informs the work, but clients are often busy professionals who want to understand their energy, recovery and long-term health."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is Prosper Continuum?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "It is structured, ongoing support that follows a completed Prosper Clarity programme. It is recommended clinically, never a condition of starting, and explained on your discovery call if relevant."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What does it cost?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Prosper is a private, self-funded service. The recommended pathway and all expected costs are explained clearly on your discovery call."
-          }
-        }
-      ]
+     "@type": "Organization",
+     "name": "Apex Longevity Academy"
     }
-  ]
-}
-</script>
+   ],
+   "medicalSpecialty": [
+    "Emergency",
+    "PrimaryCare",
+    "Musculoskeletal"
+   ],
+   "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "GMC reference number",
+    "value": "7658884"
+   },
+   "hasCredential": [
+    {
+     "@type": "EducationalOccupationalCredential",
+     "name": "GMC-registered doctor",
+     "credentialCategory": "Professional registration",
+     "recognizedBy": {
+      "@type": "Organization",
+      "name": "General Medical Council",
+      "url": "https://www.gmc-uk.org/"
+     }
+    },
+    {
+     "@type": "EducationalOccupationalCredential",
+     "name": "MBChB",
+     "credentialCategory": "degree"
+    },
+    {
+     "@type": "EducationalOccupationalCredential",
+     "name": "BSc (Hons)",
+     "credentialCategory": "degree"
+    },
+    {
+     "@type": "EducationalOccupationalCredential",
+     "name": "Postgraduate Diploma in Sports and Exercise Medicine",
+     "credentialCategory": "diploma"
+    },
+    {
+     "@type": "EducationalOccupationalCredential",
+     "name": "Diploma of the Faculty of Sport and Exercise Medicine (DipFSEM)",
+     "credentialCategory": "diploma"
+    },
+    {
+     "@type": "EducationalOccupationalCredential",
+     "name": "Membership of the Faculty of Sport and Exercise Medicine (MFSEM), both parts",
+     "credentialCategory": "professional qualification"
+    }
+   ],
+   "alumniOf": [
+    {
+     "@type": "CollegeOrUniversity",
+     "name": "University of Bath"
+    },
+    {
+     "@type": "CollegeOrUniversity",
+     "name": "University of Nottingham"
+    },
+    {
+     "@type": "CollegeOrUniversity",
+     "name": "University of Birmingham"
+    }
+   ],
+   "knowsAbout": [
+    "Longevity medicine",
+    "Performance medicine",
+    "Sports and Exercise Medicine",
+    "Emergency Medicine",
+    "Blood test interpretation",
+    "Cardiovascular and metabolic risk",
+    "Hormonal health"
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://prosper-clinic.com/#website",
+   "url": "https://prosper-clinic.com/",
+   "name": "Prosper",
+   "alternateName": "Prosper Clinic",
+   "inLanguage": "en-GB",
+   "publisher": {
+    "@id": "https://prosper-clinic.com/#org"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://prosper-clinic.com/longevity-doctor-bath#webpage",
+   "url": "https://prosper-clinic.com/longevity-doctor-bath",
+   "name": "Longevity Doctor in Bath and Bristol | Prosper",
+   "description": "Dr George Collins offers longevity and performance medicine with in-person appointments in Bath and video consultations for Bristol and beyond.",
+   "inLanguage": "en-GB",
+   "breadcrumb": {
+    "@id": "https://prosper-clinic.com/longevity-doctor-bath#breadcrumb"
+   },
+   "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": "https://prosper-clinic.com/dr-george-hero.jpg"
+   },
+   "dateModified": "2026-10-17",
+   "isPartOf": {
+    "@id": "https://prosper-clinic.com/#website"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://prosper-clinic.com/longevity-doctor-bath#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://prosper-clinic.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Insights",
+     "item": "https://prosper-clinic.com/insights"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Longevity doctor Bath and Bristol",
+     "item": "https://prosper-clinic.com/longevity-doctor-bath"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "@id": "https://prosper-clinic.com/longevity-doctor-bath#article",
+   "headline": "Longevity and performance doctor in Bath and Bristol",
+   "description": "Dr George Collins offers longevity and performance medicine with in-person appointments in Bath and video consultations for Bristol and beyond.",
+   "mainEntityOfPage": {
+    "@id": "https://prosper-clinic.com/longevity-doctor-bath#webpage"
+   },
+   "author": {
+    "@id": "https://prosper-clinic.com/#dr-george"
+   },
+   "publisher": {
+    "@id": "https://prosper-clinic.com/#org"
+   },
+   "image": "https://prosper-clinic.com/dr-george-hero.jpg",
+   "inLanguage": "en-GB",
+   "datePublished": "2026-10-17",
+   "dateModified": "2026-10-17"
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://prosper-clinic.com/longevity-doctor-bath#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Can I meet Dr George in person?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. In-person appointments are available in Bath. Most consultations are virtual, and you can choose whichever suits you."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do I need to live in Bath or Bristol?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Prosper supports clients across the UK, with consultations mostly by video and the blood draw arranged at home."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is Prosper only for athletes?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Dr George's sport and exercise medicine training informs the work, but clients are often busy professionals who want to understand their energy, recovery and long-term health."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is Prosper Continuum?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "It is structured, ongoing support that follows a completed Prosper Clarity programme. It is recommended clinically, never a condition of starting, and explained on your discovery call if relevant."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What does it cost?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Prosper is a private, self-funded service. The recommended pathway and all expected costs are explained clearly on your discovery call."
+     }
+    }
+   ]
+  }
+ ]
+}</script>
 <style>
 :root{
   --charcoal:#1A1815;--charcoal-soft:#2A2723;--gold:#C29A5B;--gold-deep:#A87F42;
@@ -292,7 +452,7 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
   <div class="container">
     <div class="eyebrow">Longevity doctor Bath and Bristol</div>
     <h1>Longevity and performance doctor in Bath and Bristol</h1>
-    <p class="answer">Dr George Collins is a GMC-registered performance and longevity doctor offering in-person appointments in Bath and video consultations for clients in Bristol and beyond, through Prosper. His background spans emergency medicine and sport and exercise medicine, including work as Immediate Care Doctor for Bath Rugby. Care begins with a complimentary 15-minute telephone discovery call.</p>
+    <p class="answer">Dr George Collins is a GMC-registered performance and longevity doctor offering in-person appointments in Bath and video consultations for clients in Bristol and beyond, through Prosper. His background spans emergency medicine and sport and exercise medicine, including work as an Immediate Care Doctor in professional rugby. Care begins with a complimentary 15-minute telephone discovery call.</p>
     <p class="byline">Written by Dr George Collins, GMC-registered doctor. Reviewed October 2026.</p>
   </div>
 </header>
@@ -305,7 +465,7 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
 <h2>Bristol, and why distance matters less</h2>
 <p>If you are in Bristol, you can choose either route. Your blood is drawn at home through the partner laboratory, with availability confirmed on your discovery call, and your consultation can be by video or in Bath. Dr George reads your results before you speak either way.</p><p>For clients further afield, the same programme applies. See <a href="/longevity-doctor-london">A longevity doctor for London, without the Harley Street overhead</a> for how this works for people based in the capital.</p>
 <h2>A background in sport and emergency medicine</h2>
-<p>Dr George holds an MBChB and a BSc (Hons), a PGDip and DipFSEM in Sports and Exercise Medicine, and both parts of the MFSEM. He is Immediate Care Doctor for Bath Rugby, teaches for Apex Longevity Academy and is completing an MSc in Sports and Exercise Medicine at the University of Bath.</p><p>His early grounding in Emergency Medicine shapes how he separates what can wait from what needs prompt review. More is on the <a href="/about">about page</a>, and <a href="/performance-doctor-uk">what a performance doctor does</a> explains the role in full.</p>
+<p>Dr George holds an MBChB and a BSc (Hons), a PGDip and DipFSEM in Sports and Exercise Medicine, and both parts of the MFSEM. He works as an Immediate Care Doctor in professional rugby, teaches for Apex Longevity Academy and is completing an MSc in Sports and Exercise Medicine at the University of Bath.</p><p>His early grounding in Emergency Medicine shapes how he separates what can wait from what needs prompt review. More is on the <a href="/about">about page</a>, and <a href="/performance-doctor-uk">what a performance doctor does</a> explains the role in full.</p>
 <h2>Who it suits</h2>
 <p>Because Dr George trained in sport and exercise medicine, active people are a natural fit, from club athletes to those training around a demanding job. The programme is just as suited to people who are not athletes at all and simply want to understand their health, energy and recovery properly.</p><p>If you already have an NHS GP you value, Prosper is designed to sit alongside that relationship, and Dr George will advise GP review whenever a result calls for it.</p>
 <h2>What you receive</h2>
