@@ -14,7 +14,7 @@ Prosper complements a client's GP and coach. It does not replace primary care an
 
 ## How it works
 
-1. Apply at /apply and book a complimentary 15-minute telephone discovery call with Dr George. There is no obligation and no medical detail is needed at this stage.
+1. Apply at /apply and book a complimentary 15-minute video discovery call with Dr George. There is no obligation and no medical detail is needed at this stage.
 2. Secure onboarding, then one baseline blood panel completed close to home.
 3. A 60-minute doctor consultation, where history, goals and results are considered together.
 4. A written, personal action plan, followed by an 8 to 12 week implementation period.
