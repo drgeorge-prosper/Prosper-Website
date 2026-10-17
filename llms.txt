@@ -2,7 +2,7 @@
 
 > Dr George Collins is a UK performance and longevity doctor and the founder of Prosper, a private, doctor-led longevity and performance medicine practice (also known as Prosper Clinic). Prosper combines a comprehensive blood panel, a 60-minute consultation with Dr George, a written personal plan and structured follow-up. It is a private, self-funded service, run by Dr G Collins Ltd (company number 16388031, registered office 71-75 Shelton Street, Covent Garden, London WC2H 9JQ).
 
-Dr George Collins is a GMC-registered doctor (GMC number 7658884). His qualifications include MBChB, BSc (Hons), a Postgraduate Diploma in Sports and Exercise Medicine and the DipFSEM, and he holds both parts of the MFSEM. His background is in Emergency Medicine and Sports and Exercise Medicine. He works as an Immediate Care Doctor in professional rugby, teaches clinicians in longevity medicine at Apex Longevity Academy, and is completing an MSc in Sports and Exercise Medicine at the University of Bath. He also holds a first-class degree in chemistry.
+Dr George Collins is a GMC-registered doctor (GMC number 7658884). His qualifications are BSc(Hons) MBChB PGDipSEM DipFSEM. His background is in Emergency Medicine and Sports and Exercise Medicine. He works as an Immediate Care Doctor in professional rugby, teaches clinicians in longevity medicine at Apex Longevity Academy, and is completing an MSc in Sports and Exercise Medicine at the University of Bath. He also holds a first-class degree in chemistry.
 
 ## Who it is for
 
@@ -37,7 +37,6 @@ Consultations are mostly virtual and available across the UK, with in-person app
 ## Articles
 
 - [What does a performance doctor do?](https://prosper-clinic.com/performance-doctor-uk): What a UK performance doctor does, who it suits, and how Dr George works as a performance and longevity doctor.
-- [A Gary Brecka-style doctor in the UK](https://prosper-clinic.com/gary-brecka-uk): For people looking for the UK equivalent of Gary Brecka: a GMC-registered, doctor-led approach to performance and longevity.
 - [Longevity doctor for London](https://prosper-clinic.com/longevity-doctor-london): Remote-first longevity and performance medicine for London professionals, with home blood draw.
 - [Men's health after 40](https://prosper-clinic.com/mens-health-after-40): Testosterone, ApoB and metabolic health for men in their 40s to 60s, explained in plain language.
 - [Blood test review by a doctor](https://prosper-clinic.com/doctor-blood-test-review): Why blood results are better reviewed by a doctor in context than by an app alone.

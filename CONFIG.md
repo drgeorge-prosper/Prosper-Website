@@ -10,7 +10,7 @@ Single source of truth for Prosper v2 configuration values. Runtime values consu
 - LEGAL_ENTITY_DETAILS: Dr G Collins Ltd, company number 16388031, registered office 71-75 Shelton Street, Covent Garden, London WC2H 9JQ
 - CONTACT_EMAIL: drgeorge@prosper-clinic.com
 - DATA_CONTROLLER_WORDING: Dr G Collins Ltd, ICO registration ZB891517
-- DR_GEORGE_CREDENTIALS: Dr George Collins, GMC-registered, BSc(Hons) MBChB DipMSK PGDip
+- DR_GEORGE_CREDENTIALS: Dr George Collins, GMC-registered, BSc(Hons) MBChB PGDipSEM DipFSEM
 
 ## Integrations (confirmed)
 - CALENDLY_URL: https://calendly.com/drgeorge-prosper-clinic/15min
@@ -59,7 +59,7 @@ Single source of truth for Prosper v2 configuration values. Runtime values consu
 - New page checklist: copy the head of a similar page, change title, description, canonical, og:url, twitter tags and the WebPage and BreadcrumbList nodes, keep the shared nodes unchanged, add the page to `sitemap.xml` and to `llms.txt`.
 - `llms.txt` summarises the site for AI assistants. `robots.txt` explicitly allows the main AI search and assistant crawlers, each with `Disallow: /apply/book`.
 - `_headers` sets security headers (no CSP, so Calendly and Formspree are unaffected) and short caching for images and scripts.
-- Credentials in schema (MBChB, BSc (Hons), PGDip Sports and Exercise Medicine, DipFSEM, MFSEM, GMC number) come from George's confirmed facts and are broader than the wording currently visible on /about (`DR_GEORGE_CREDENTIALS` above). Align the visible wording when the About body is next edited.
+- Credentials everywhere (visible and schema): BSc(Hons) MBChB PGDipSEM DipFSEM, GMC number 7658884. Set by George 17 Oct 2026. No Gary Brecka references anywhere on the site (George, 17 Oct 2026).
 
 ## Routes removed entirely (20 July 2026)
 /complaints — not built. No page, no nav link, no footer link, no sitemap entry. Any complaint-handling wording on /terms or /privacy points to CONTACT_EMAIL directly.
