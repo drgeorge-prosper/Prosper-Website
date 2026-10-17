@@ -14,7 +14,7 @@ Single source of truth for Prosper v2 configuration values. Runtime values consu
 
 ## Integrations (confirmed)
 - CALENDLY_URL: https://calendly.com/drgeorge-prosper-clinic/15min
-- APPLICATION_FORM_ENDPOINT: https://formspree.io/f/xvzerwyv (used for /apply submissions and the /apply/book priority-list fallback; separate from the legacy waitlist endpoint mnjkojka, which is retired)
+- APPLICATION_FORM_ENDPOINT: https://formspree.io/f/xvzerwyv (no longer used by /apply since the October 2026 conversion refresh, which replaced the application form with direct Calendly booking; still used by the /for-coaches enquiry form; separate from the legacy waitlist endpoint mnjkojka, which is retired)
 - PRIORITY_LIST_DESTINATION: same as APPLICATION_FORM_ENDPOINT until a dedicated endpoint is confirmed
 
 ## Unresolved (must remain configurable, do not hardcode a guess)
@@ -33,8 +33,11 @@ Single source of truth for Prosper v2 configuration values. Runtime values consu
 ## Routes (public, in sitemap)
 /, /how-it-works, /for-coaches, /about, /apply, /privacy, /terms, /cancellations
 
+## Booking flow (October 2026)
+/apply is the booking page: Calendly inline embed, no form. UTM parameters (or, if none, a utm_source worked out from the referring site, e.g. chatgpt.com, perplexity.ai, gemini.google.com, claude.ai, google) are passed to Calendly by prosper-track.js. Every site CTA reads "Book a discovery call" ("Book a call" in the mobile header).
+
 ## Routes (public, excluded from sitemap and nav)
-/apply/book (noindex, Calendly embed)
+/apply/book (noindex). Now a thin redirect to /apply (meta refresh and JS), also forced with a 301 in `_redirects`. File left in place per the drag-upload workflow constraint.
 
 ## Routes removed from nav, force-redirected
 /packages → / (301, forced via `_redirects`, file itself left in place per the drag-upload workflow constraint)
@@ -42,8 +45,12 @@ Single source of truth for Prosper v2 configuration values. Runtime values consu
 ## Routes removed entirely (20 July 2026)
 /complaints — not built. No page, no nav link, no footer link, no sitemap entry. Any complaint-handling wording on /terms or /privacy points to CONTACT_EMAIL directly.
 
-## Analytics events (not yet instrumented, placeholder only)
-apply_click (source), apply_submit, book_page_view, discovery_call_booked, priority_list_submit, coach_enquiry_submit
+## Analytics events
+Instrumented in prosper-track.js via window.prosperTrack(name, props), which forwards to Plausible, Umami or gtag if loaded and otherwise does nothing (Cloudflare Web Analytics has no custom events):
+- cta_click (location: nav, nav_mobile, hero, who_for, programme, approach, final_cta, sticky_bar, body)
+- book_page_view (/apply)
+- discovery_call_booked (on Calendly's calendly.event_scheduled message; utm_source attached)
+Not instrumented: coach_enquiry_submit. Retired: apply_click, apply_submit, priority_list_submit.
 
 
 ## Deploy trigger note

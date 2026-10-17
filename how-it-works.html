@@ -125,7 +125,7 @@ section{padding:96px 0}
 .step-card summary h3{font-size:17px;color:var(--white);font-weight:600;margin:0 0 6px;display:block}
 .step-card summary .teaser{display:block;font-size:13.5px;color:rgba(244,239,230,.8);line-height:1.6;padding-right:20px}
 .step-card summary::after{content:"+";position:absolute;top:28px;right:22px;font-family:var(--serif);font-size:22px;color:var(--gold)}
-.step-card[open] summary::after{content:"–"}
+.step-card[open] summary::after{content:"\2212"}
 .step-card .step-detail{padding:0 26px 26px;font-size:13.5px;color:rgba(244,239,230,.85);line-height:1.7}
 .step-card .step-detail ul{margin:0 0 0 18px}
 .step-card .step-detail li{margin-bottom:6px}
@@ -208,6 +208,32 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
   .credential-plaque{min-width:0;flex:1 1 calc(50% - 20px);height:96px}
   .credential-plaque img{max-height:56px}
 }
+
+/* ---------- Conversion refresh: shared ---------- */
+.cta-short{display:none}
+.nav-book{display:none}
+.sticky-cta{display:none}
+@media (max-width:920px){
+  .nav-toggle{min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center;margin-right:-8px}
+  .nav-links{gap:0;padding:12px 24px 20px}
+  .nav-links a:not(.btn){display:block;width:100%;padding:12px 0;min-height:44px}
+  .nav-links a:not(.btn)::after{display:none}
+  .nav-links .btn{margin-top:10px;width:100%;min-height:44px}
+  .nav-book{display:inline-flex;align-items:center;margin-left:auto;margin-right:12px;padding:10px 16px;min-height:44px;font-size:13.5px}
+  .nav-links .cta-long{display:inline}
+  .nav-links .cta-short{display:none}
+  .foot-links{gap:4px 24px}
+  .foot-links a{display:inline-block;padding:10px 0;min-height:44px}
+}
+@media (max-width:920px){
+  body.has-sticky-cta footer{padding-bottom:calc(116px + env(safe-area-inset-bottom, 0px))}
+  .sticky-cta{display:block;position:fixed;left:0;right:0;bottom:0;z-index:90;background:rgba(26,24,21,.97);border-top:1px solid rgba(194,154,91,.35);padding:10px 16px calc(10px + env(safe-area-inset-bottom, 0px));transform:translateY(110%);transition:transform .3s ease}
+  .sticky-cta.show{transform:none}
+  .sticky-cta .btn{display:block;width:100%;padding:13px 16px;min-height:48px}
+}
+@media (max-width:920px) and (prefers-reduced-motion: reduce){
+  .sticky-cta{transition:none}
+}
 </style>
 </head>
 <body>
@@ -228,12 +254,13 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
 <nav>
   <div class="nav-inner">
     <a href="/" class="logo">PROSPER<span>.</span></a>
-    <button class="nav-toggle" id="navToggle" aria-label="Open menu">☰</button>
+    <a href="/apply" class="btn btn-gold nav-book" data-cta="nav_mobile">Book a call</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">☰</button>
     <div class="nav-links" id="navLinks">
       <a href="/how-it-works">How It Works</a>
-      <a href="/for-coaches">For Coaches</a>
       <a href="/about">About</a>
-      <a href="/apply" class="btn btn-gold">Apply to Prosper</a>
+      <a href="/for-coaches">For Coaches</a>
+      <a href="/apply" class="btn btn-gold" data-cta="nav"><span class="cta-long">Book a discovery call</span><span class="cta-short">Book a call</span></a>
     </div>
   </div>
 </nav>
@@ -255,11 +282,11 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
     </div>
     <div class="stepper reveal">
       <details class="step-card">
-        <summary><span class="step-num">1</span><h3>Apply</h3><span class="teaser">A short, non-clinical application.</span></summary>
-        <div class="step-detail">Two minutes, no medical detail needed at this stage.</div>
+        <summary><span class="step-num">1</span><h3>Book a call</h3><span class="teaser">Choose a time that suits you.</span></summary>
+        <div class="step-detail">It takes a minute online. No medical detail is needed at this stage.</div>
       </details>
       <details class="step-card">
-        <summary><span class="step-num">2</span><h3>Discovery call</h3><span class="teaser">A complimentary 15-minute conversation with Dr George.</span></summary>
+        <summary><span class="step-num">2</span><h3>Discovery call</h3><span class="teaser">A complimentary 15-minute phone call with Dr George.</span></summary>
         <div class="step-detail">About what you're looking for and whether Prosper is the right fit. Not a medical consultation, and no obligation.</div>
       </details>
       <details class="step-card">
@@ -300,8 +327,8 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
     <div class="mid-cta">
       <p>You can start here and read the rest later.</p>
       <div>
-        <a href="/apply" class="btn btn-gold">Apply to Prosper</a>
-        <div class="cta-subline">A two-minute application, then a complimentary 15-minute call with Dr George.</div>
+        <a href="/apply" class="btn btn-gold">Book a discovery call</a>
+        <div class="cta-subline">A complimentary 15-minute phone call with Dr George. No obligation.</div>
       </div>
     </div>
   </div>
@@ -392,8 +419,8 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
     <h2>Begin with a conversation.</h2>
     <p>Prosper is a private, self-funded service. The recommended pathway and all expected costs are explained clearly before you decide whether to proceed.</p>
     <div class="cta-btns">
-      <a href="/apply" class="btn btn-gold">Apply to Prosper</a>
-      <div class="cta-subline">A two-minute application, then a complimentary 15-minute call with Dr George.</div>
+      <a href="/apply" class="btn btn-gold">Book a discovery call</a>
+      <div class="cta-subline">A complimentary 15-minute phone call with Dr George. No obligation.</div>
     </div>
   </div>
 </section>
@@ -445,14 +472,21 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
   </div>
 </footer>
 
+<!-- Mobile sticky booking bar -->
+<div class="sticky-cta" id="stickyCta">
+  <a href="/apply" class="btn btn-gold" data-cta="sticky_bar">Book a complimentary discovery call</a>
+</div>
+
 <script src="/site-config.js"></script>
+<script src="/prosper-track.js"></script>
 <script>
 (function(){
   var track = document.getElementById('tickerTrack');
   track.innerHTML += track.innerHTML;
 })();
 document.getElementById('navToggle').addEventListener('click', function(){
-  document.getElementById('navLinks').classList.toggle('open');
+  var open = document.getElementById('navLinks').classList.toggle('open');
+  this.setAttribute('aria-expanded', open ? 'true' : 'false');
 });
 (function(){
   var items = document.querySelectorAll('.reveal');
@@ -466,6 +500,15 @@ document.getElementById('navToggle').addEventListener('click', function(){
     });
   }, {threshold: 0.12, rootMargin: '0px 0px -60px 0px'});
   items.forEach(function(el){ io.observe(el); });
+})();
+// Mobile sticky booking bar: appears once the visitor scrolls past the first screen.
+(function(){
+  var bar = document.getElementById('stickyCta');
+  if (!bar) return;
+  document.body.classList.add('has-sticky-cta');
+  function update(){ bar.classList.toggle('show', window.scrollY > window.innerHeight * 0.6); }
+  window.addEventListener('scroll', update, {passive:true});
+  update();
 })();
 </script>
 </body>

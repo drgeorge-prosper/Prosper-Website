@@ -40,9 +40,10 @@
   w.addEventListener('load', function () { setTimeout(flush, 0); });
 
   // ---------- Attribution ----------
-  // Stores where this visit came from (UTM tags, or the referring site) for the
-  // length of the browser session, so the booking page can pass it to Calendly.
-  var KEY = 'prosper_attr';
+  // Works out where this visit came from (UTM tags, or the referring site) and
+  // carries it in the URL when the visitor clicks through to another page on this
+  // site, so the booking page can pass it to Calendly. Nothing is stored on the
+  // device (no cookies, no localStorage or sessionStorage).
   var UTM = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
   var AI = {
     'chatgpt.com': 'chatgpt.com', 'chat.openai.com': 'chatgpt.com',
@@ -60,40 +61,55 @@
     return { utm_source: host, utm_medium: 'referral' };
   }
 
-  function read() {
-    try { return JSON.parse(w.sessionStorage.getItem(KEY) || 'null'); } catch (e) { return null; }
-  }
-  function save(obj) {
-    try { w.sessionStorage.setItem(KEY, JSON.stringify(obj)); } catch (e) {}
+  function sameSite(host) {
+    return (host || '').replace(/^www\./, '') === w.location.hostname.replace(/^www\./, '');
   }
 
-  function capture() {
+  var attribution = (function () {
     var params, found = {}, hasUtm = false;
-    try { params = new URLSearchParams(w.location.search); } catch (e) { return; }
+    try { params = new URLSearchParams(w.location.search); } catch (e) { return {}; }
     UTM.forEach(function (k) {
       var v = params.get(k);
       if (v) { found[k] = v.slice(0, 100); hasUtm = true; }
     });
+    if (hasUtm) return found;
     var refHost = '';
     try { if (d.referrer) refHost = new URL(d.referrer).hostname; } catch (e) {}
-    var external = refHost && refHost.replace(/^www\./, '') !== w.location.hostname.replace(/^www\./, '');
+    if (!refHost || sameSite(refHost)) return {}; // direct visit or internal page
+    found = sourceFromHost(refHost);
+    found.utm_content = w.location.pathname.slice(0, 100); // landing page
+    return found;
+  })();
 
-    if (!hasUtm && !external) return; // internal navigation or direct: keep what we have
-    if (!hasUtm) found = sourceFromHost(refHost);
-    if (!found.utm_content) found.utm_content = w.location.pathname.slice(0, 100);
-    save(found);
-  }
-  capture();
+  w.prosperAttribution = function () { return attribution; };
 
-  w.prosperAttribution = function () { return read() || {}; };
-
-  // ---------- CTA clicks ----------
   d.addEventListener('click', function (e) {
     var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
     if (!a) return;
-    var path;
-    try { path = new URL(a.href, w.location.href).pathname.replace(/\/$/, '').replace(/\.html$/, ''); } catch (err) { return; }
-    if (path !== '/apply') return;
-    w.prosperTrack('cta_click', { location: a.getAttribute('data-cta') || 'other' });
-  });
+    var url;
+    try { url = new URL(a.href, w.location.href); } catch (err) { return; }
+    if (!/^https?:$/.test(url.protocol) || !sameSite(url.hostname)) return;
+
+    // Booking CTA click
+    var path = url.pathname.replace(/\/$/, '').replace(/\.html$/, '');
+    if (path === '/apply') {
+      var loc = a.getAttribute('data-cta');
+      if (!loc) {
+        if (a.closest('nav')) loc = 'nav';
+        else if (a.closest('header')) loc = 'hero';
+        else if (a.closest('section.cta')) loc = 'final_cta';
+        else if (a.closest('footer')) loc = 'footer';
+        else loc = 'body';
+      }
+      w.prosperTrack('cta_click', { location: loc });
+    }
+
+    // Carry attribution to the next page (skip in-page anchors)
+    if (url.pathname === w.location.pathname && url.hash) return;
+    var changed = false;
+    UTM.forEach(function (k) {
+      if (attribution[k] && !url.searchParams.has(k)) { url.searchParams.set(k, attribution[k]); changed = true; }
+    });
+    if (changed) a.href = url.toString();
+  }, true);
 })(window, document);

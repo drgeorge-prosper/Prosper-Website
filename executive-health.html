@@ -124,6 +124,32 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
   .coach-grid{grid-template-columns:1fr}
   section{padding:64px 0}
 }
+
+/* ---------- Conversion refresh: shared ---------- */
+.cta-short{display:none}
+.nav-book{display:none}
+.sticky-cta{display:none}
+@media (max-width:920px){
+  .nav-toggle{min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center;margin-right:-8px}
+  .nav-links{gap:0;padding:12px 24px 20px}
+  .nav-links a:not(.btn){display:block;width:100%;padding:12px 0;min-height:44px}
+  .nav-links a:not(.btn)::after{display:none}
+  .nav-links .btn{margin-top:10px;width:100%;min-height:44px}
+  .nav-book{display:inline-flex;align-items:center;margin-left:auto;margin-right:12px;padding:10px 16px;min-height:44px;font-size:13.5px}
+  .nav-links .cta-long{display:inline}
+  .nav-links .cta-short{display:none}
+  .foot-links{gap:4px 24px}
+  .foot-links a{display:inline-block;padding:10px 0;min-height:44px}
+}
+@media (max-width:920px){
+  body.has-sticky-cta footer{padding-bottom:calc(116px + env(safe-area-inset-bottom, 0px))}
+  .sticky-cta{display:block;position:fixed;left:0;right:0;bottom:0;z-index:90;background:rgba(26,24,21,.97);border-top:1px solid rgba(194,154,91,.35);padding:10px 16px calc(10px + env(safe-area-inset-bottom, 0px));transform:translateY(110%);transition:transform .3s ease}
+  .sticky-cta.show{transform:none}
+  .sticky-cta .btn{display:block;width:100%;padding:13px 16px;min-height:48px}
+}
+@media (max-width:920px) and (prefers-reduced-motion: reduce){
+  .sticky-cta{transition:none}
+}
 </style>
 </head>
 <body>
@@ -142,12 +168,13 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
 <nav>
   <div class="nav-inner">
     <a href="/" class="logo">PROSPER<span>.</span></a>
-    <button class="nav-toggle" id="navToggle" aria-label="Open menu">☰</button>
+    <a href="/apply" class="btn btn-gold nav-book" data-cta="nav_mobile">Book a call</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">☰</button>
     <div class="nav-links" id="navLinks">
       <a href="/how-it-works">How It Works</a>
-      <a href="/for-coaches">For Coaches</a>
       <a href="/about">About</a>
-      <a href="/apply" class="btn btn-gold">Apply to Prosper</a>
+      <a href="/for-coaches">For Coaches</a>
+      <a href="/apply" class="btn btn-gold" data-cta="nav"><span class="cta-long">Book a discovery call</span><span class="cta-short">Book a call</span></a>
     </div>
   </div>
 </nav>
@@ -215,7 +242,7 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
     </ul>
     <div style="margin-top:28px;display:flex;gap:16px;flex-wrap:wrap">
       <a href="/how-it-works" class="btn btn-outline">See the full process</a>
-      <a href="/apply" class="btn btn-gold">Apply to Prosper</a>
+      <a href="/apply" class="btn btn-gold">Book a discovery call</a>
     </div>
     <p style="margin-top:16px;font-size:13.5px;color:var(--ink-soft)">Prosper is not an occupational health or employer screening service. This is a personal, private programme.</p>
   </div>
@@ -225,10 +252,10 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
   <div class="container reveal">
     <div class="eyebrow">Begin with a conversation</div>
     <h2>Begin with a conversation.</h2>
-    <p>A short application, then a complimentary 15-minute discovery call. The practical details and expected costs are explained before you proceed.</p>
+    <p>A complimentary 15-minute discovery call by phone. The practical details and expected costs are explained before you proceed.</p>
     <div class="cta-btns">
-      <a href="/apply" class="btn btn-gold">Apply to Prosper</a>
-      <div class="cta-subline">A two-minute application, then a complimentary 15-minute call with Dr George.</div>
+      <a href="/apply" class="btn btn-gold">Book a discovery call</a>
+      <div class="cta-subline">A complimentary 15-minute phone call with Dr George. No obligation.</div>
     </div>
   </div>
 </section>
@@ -268,13 +295,20 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
   </div>
 </footer>
 
+<!-- Mobile sticky booking bar -->
+<div class="sticky-cta" id="stickyCta">
+  <a href="/apply" class="btn btn-gold" data-cta="sticky_bar">Book a complimentary discovery call</a>
+</div>
+
+<script src="/prosper-track.js"></script>
 <script>
 (function(){
   var track = document.getElementById('tickerTrack');
   track.innerHTML += track.innerHTML;
 })();
 document.getElementById('navToggle').addEventListener('click', function(){
-  document.getElementById('navLinks').classList.toggle('open');
+  var open = document.getElementById('navLinks').classList.toggle('open');
+  this.setAttribute('aria-expanded', open ? 'true' : 'false');
 });
 (function(){
   var items = document.querySelectorAll('.reveal');
@@ -288,6 +322,15 @@ document.getElementById('navToggle').addEventListener('click', function(){
     });
   }, {threshold: 0.12, rootMargin: '0px 0px -60px 0px'});
   items.forEach(function(el){ io.observe(el); });
+})();
+// Mobile sticky booking bar: appears once the visitor scrolls past the first screen.
+(function(){
+  var bar = document.getElementById('stickyCta');
+  if (!bar) return;
+  document.body.classList.add('has-sticky-cta');
+  function update(){ bar.classList.toggle('show', window.scrollY > window.innerHeight * 0.6); }
+  window.addEventListener('scroll', update, {passive:true});
+  update();
 })();
 </script>
 </body>
