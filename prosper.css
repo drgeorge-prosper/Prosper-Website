@@ -237,3 +237,6 @@ li.has-ic>span:last-child{flex:1}
 .step-card summary .step-num{display:inline-block!important;vertical-align:middle;margin:0!important}
 .step-card summary .ic-card{display:inline-flex;vertical-align:middle;margin:0 0 0 14px!important}
 .step-card summary h3{margin-top:12px!important}
+.ic.ic-lg{width:56px;height:56px}
+.ic.ic-lg svg{width:30px;height:30px;stroke-width:1.5}
+@media (max-width:920px){.ic.ic-lg{width:48px;height:48px}.ic.ic-lg svg{width:26px;height:26px}}
