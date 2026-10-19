@@ -180,3 +180,19 @@ section{padding-top:var(--sec-y);padding-bottom:var(--sec-y)}
 }
 /* Post-nominals keep their real case (BSc, not BSC) */
 .creds{text-transform:none!important;letter-spacing:.04em!important;font-size:var(--fs-small)!important}
+
+/* ---------- Homepage hero hierarchy (Oct 19) ---------- */
+.logo{font-size:30px!important;letter-spacing:.08em}
+.hero h1{font-size:clamp(44px,6.4vw,80px)!important;line-height:1.04}
+.hero-sub{font-size:16px!important;line-height:1.6;color:rgba(244,239,230,.82)}
+.hero-doc img{width:76px!important;height:76px!important}
+.hero-doc b{font-size:21px}
+.foot-tag{margin-top:10px;font-size:var(--fs-label);letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+@media (max-width:920px){
+  .logo{font-size:27px!important}
+  .nav-inner{min-height:64px}
+  .nav-links{top:64px}
+  .hero h1{font-size:44px!important}
+  .hero-sub{font-size:15.5px!important}
+  .hero{padding-top:36px}
+}
