@@ -1,0 +1,182 @@
+/* =========================================================
+   Prosper shared design layer (October 2026)
+   Loaded after each page's own <style>, so it sets one
+   type scale, one spacing scale and contrast-safe colours
+   across every page. Edit sizes here, not in the pages.
+   ========================================================= */
+
+:root{
+  /* Type scale: 4 body sizes + 1 label, 4 heading sizes */
+  --fs-lead:19px;     /* intro paragraphs */
+  --fs-body:17px;     /* running text */
+  --fs-sub:15px;      /* card and list secondary text */
+  --fs-small:13.5px;  /* notes, captions, footer */
+  --fs-label:12px;    /* uppercase eyebrows and tags */
+  --fs-h1:clamp(36px,5.2vw,62px);
+  --fs-h2:clamp(30px,3.8vw,44px);
+  --fs-h3:22px;
+  --fs-h4:17px;       /* sans semibold: FAQ questions, list titles */
+  --lh-body:1.65;
+
+  /* Spacing scale */
+  --sec-y:clamp(52px,9vw,104px);
+  --hero-top:clamp(40px,7vw,96px);
+  --hero-bottom:clamp(44px,7vw,80px);
+
+  /* Gold for text on light backgrounds (4.7:1+ on cream). Bright gold stays for buttons and dark sections */
+  --gold-ink:#7D5D2B;
+}
+
+/* ---------- Base ---------- */
+body{font-size:var(--fs-body);line-height:var(--lh-body);-webkit-text-size-adjust:100%}
+p,li{line-height:var(--lh-body)}
+
+/* ---------- Headings ---------- */
+.hero h1,.page-hero h1,.book-hero h1{font-size:var(--fs-h1);line-height:1.08;letter-spacing:-0.005em}
+.section-head h2,.cta h2,.doc-copy h2,.who-for h2,.prose h2,.why-copy h2{font-size:var(--fs-h2);line-height:1.12}
+.legal-prose h2{font-size:26px}
+.coach-card h3,.continuum-card b,.lens h3,.reasons h3,.topic-card h3,.pay-card h3,.pkg h3,.hero-card h3,
+.book-aside h2,.booked h2,.step h3,.modal h3,.step-card summary h3,.mid-cta h3{font-size:var(--fs-h3);line-height:1.2}
+.num-row h4,.faq summary{font-size:var(--fs-h4);line-height:1.45}
+
+/* ---------- Lead text ---------- */
+.hero-sub,.page-hero p,.book-hero p,.mid-cta p,.callout-italic,.note-line-dark{font-size:var(--fs-lead);line-height:1.6}
+.page-hero p.answer{font-size:var(--fs-lead)}
+
+/* ---------- Body text ---------- */
+.answer-first p,.section-head p,.why-copy p,.doc-copy p,.prose p,.prose ul li,.prose ol li,.cta p,
+.coach-teaser p,.money-line,.recognition-list li,.who-list li,.pressures-list li,.related li,.faq details p,
+.clarity-checklist li,.credential-list li,.legal-prose p,.legal-prose li,.standards-list li,.process-cta p,
+.credentials-band .cred-sub,.cal-unavailable{font-size:var(--fs-body)}
+
+/* ---------- Secondary text ---------- */
+.step p,.num-row p,.coach-card p,.continuum-card p,.pkg li,.hero-card p,.pay-card p,.topic-card p,
+.step-card summary .teaser,.step-card .step-detail,.lens li,.reasons li,.call-steps li,.booked p,
+.book-fallback,.modal p,.pkg .pkg-sub,.credential-plaque .inst-text{font-size:var(--fs-sub);line-height:1.6}
+
+/* ---------- Small text ---------- */
+.cta-subline,.call-note,.note-line,.notice,.privacy-line,.pricing-note,.pkg .price-note,.continuum-note,
+.legal-meta,.page-hero p.byline,.quote-block cite,.credibility-row,.doc-copy .creds,footer,footer p,footer a{font-size:var(--fs-small)}
+
+/* ---------- Labels ---------- */
+.eyebrow,.trust-chip,.cred-strip li,.stat span,.stat-band-item .lbl,.topic-card span,.hero-card .tag,
+.pkg .badge,.reason-group h4,.contact-card label,.modal label{font-size:var(--fs-label);letter-spacing:.16em}
+.trust-chip{letter-spacing:.04em}
+
+/* ---------- Buttons ---------- */
+.btn{font-size:15px;letter-spacing:.02em}
+
+/* ---------- Contrast: gold text on light backgrounds ---------- */
+.eyebrow,.money-line,.callout-italic,.doc-copy .creds,.reason-group h4,.topic-card span,.legal-prose a,
+.coach-teaser a.link,.privacy-line a,.book-fallback a,.cal-unavailable a,.cta-subline,.related a,.prose a{color:var(--gold-ink)}
+/* Dark sections keep the bright gold */
+:is(.hero,.page-hero,.cta,.process,.credentials-band,.book-hero,.hero-card,.quote-block,.stat-lead,.step,.step-card,.featured)
+  :is(.eyebrow,.callout-italic,.cta-subline,.money-line){color:var(--gold)}
+:is(.page-hero,.cta,.process,.credentials-band,.book-hero,.hero-card,.quote-block,.stat-lead,.step,.step-card,.featured) a:not(.btn){color:var(--gold)}
+.hero .cta-subline{color:rgba(244,239,230,.72)}
+footer .eyebrow{color:var(--gold)}
+/* Small italic notes are hard to read: set them upright */
+.money-line,.callout-italic,.note-line-dark,.cta .callout-italic,.process .callout-italic{font-style:normal!important;font-family:var(--sans)!important;font-size:var(--fs-sub)!important;line-height:1.6}
+
+/* ---------- Section spacing ---------- */
+section{padding-top:var(--sec-y);padding-bottom:var(--sec-y)}
+.page-hero{padding:var(--hero-top) 0 var(--hero-bottom)}
+
+/* ---------- Header ---------- */
+.ticker{display:none!important}
+.logo{font-size:22px}
+
+/* ---------- Mobile ---------- */
+@media (max-width:920px){
+  :root{--fs-lead:18px;--fs-body:16.5px}
+  .container{padding:0 20px}
+  .nav-inner{padding:10px 20px;min-height:60px}
+  .logo{font-size:20px}
+  .nav-book{padding:9px 14px;font-size:13.5px;min-height:40px;transition:opacity .25s ease}
+  body.sticky-on .nav-book{opacity:0;pointer-events:none}
+
+  /* Full-screen menu */
+  .nav-links{position:fixed;top:60px;left:0;right:0;bottom:0;padding:28px 24px calc(28px + env(safe-area-inset-bottom,0px));
+    background:var(--bone);border-bottom:0;overflow-y:auto;gap:0}
+  .nav-links.open{display:flex}
+  .nav-links a:not(.btn){font-family:var(--serif);font-size:30px;font-weight:500;padding:14px 0;
+    border-bottom:1px solid rgba(26,24,21,.1);color:var(--charcoal)}
+  .nav-links .btn{margin-top:28px;font-size:16px;padding:16px 24px}
+  body.menu-open{overflow:hidden}
+  body.menu-open .sticky-cta{display:none}
+
+  /* Text alignment: left everywhere except the closing CTA */
+  .coach-teaser,.coach-teaser p,.credentials-band,.credentials-band .cred-sub{text-align:left}
+  .credentials-band .eyebrow{text-align:left}
+
+  /* Sticky bar slimmer */
+  .sticky-cta{padding:8px 16px calc(8px + env(safe-area-inset-bottom,0px))}
+  .sticky-cta .btn{min-height:46px;padding:12px 16px;font-size:15px}
+
+  .cta-subline{margin-top:10px}
+}
+
+/* ---------- Footer ---------- */
+@media (max-width:920px){
+  .foot-links{display:grid!important;grid-template-columns:1fr 1fr;gap:2px 20px!important}
+  .foot-links a{padding:9px 0!important;min-height:0!important}
+}
+
+/* ---------- Affiliation logos ---------- */
+
+
+
+@media (prefers-reduced-motion:reduce){.nav-book{transition:none}}
+
+/* ---------- Homepage hero doctor card ---------- */
+.hero-doc{display:inline-flex;align-items:center;gap:14px;margin-top:28px;padding:10px 18px 10px 10px;border:1px solid rgba(244,239,230,.18);border-radius:999px;color:var(--bone);text-decoration:none;transition:border-color .2s}
+.hero-doc:hover{border-color:var(--gold)}
+.hero-doc img{width:52px;height:52px;border-radius:50%;object-fit:cover;object-position:50% 20%;flex:none}
+.hero-doc b{display:block;font-family:var(--serif);font-size:19px;font-weight:600;line-height:1.2}
+.hero-doc span span{display:block;font-size:var(--fs-small);color:rgba(244,239,230,.7);line-height:1.4}
+.hero{padding-bottom:var(--hero-bottom)}
+@media (max-width:920px){
+  .hero{padding-top:32px}
+  .hero-doc{margin-top:22px;width:100%;border-radius:12px}
+  .hero .eyebrow{margin-bottom:14px}
+  .answer-first p{font-size:var(--fs-body);line-height:1.7}
+}
+
+/* ---------- Article pages: short summary in hero, rest in body ---------- */
+.prose .lead-in{font-size:var(--fs-lead);color:var(--charcoal);margin-bottom:28px}
+.page-hero p.answer{max-width:680px}
+
+/* ---------- Affiliation logos: white tiles, logos fill them ---------- */
+.credential-plaque{background:#fff;padding:14px 18px}
+.credential-plaque img{max-height:64px}
+@media (max-width:920px){
+  .credentials-row{display:grid!important;grid-template-columns:1fr 1fr;gap:12px!important}
+  .credential-plaque{max-width:none!important;height:84px!important;padding:12px 14px}
+  .credential-plaque img{max-height:56px!important}
+  .credential-plaque:last-child:nth-child(odd){grid-column:1 / -1}
+}
+
+/* ---------- Tighter step cards on mobile ---------- */
+@media (max-width:920px){
+  .step{padding:24px 22px!important}
+  .step b{font-size:34px!important;margin-bottom:6px}
+  .step h3{margin-bottom:4px}
+  .trust-chips,.chip-row{display:flex;flex-wrap:wrap;gap:8px}
+  .faq summary{padding-top:16px;padding-bottom:16px}
+}
+.cta-money{font-size:var(--fs-sub);color:rgba(244,239,230,.75);max-width:560px;margin:0 auto 28px}
+
+.hero a.hero-doc{color:var(--bone)}
+@media (max-width:920px){
+  .steps{grid-template-columns:1fr 1fr!important}
+  .step{padding:20px 16px!important}
+  .step b{font-size:30px!important}
+  .step p{font-size:14px}
+  .trust-row{gap:8px;margin:22px 0 26px}
+  .trust-chip{padding:7px 12px;font-size:11.5px}
+  .reasons ul{display:grid;grid-template-columns:1fr 1fr;column-gap:16px}
+  .reasons li{font-size:var(--fs-sub);padding-top:10px!important;padding-bottom:10px!important}
+  .reasons{padding:26px 22px!important}
+}
+/* Post-nominals keep their real case (BSc, not BSC) */
+.creds{text-transform:none!important;letter-spacing:.04em!important;font-size:var(--fs-small)!important}

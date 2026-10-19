@@ -130,19 +130,9 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
   .foot-links a{display:inline-block;padding:10px 0;min-height:44px}
 }
 </style>
+<link rel="stylesheet" href="/prosper.css">
 </head>
 <body>
-
-<div class="ticker" aria-hidden="true">
-  <div class="ticker-track" id="tickerTrack">
-    <span>Doctor-led longevity &amp; performance medicine</span>
-    <span>Founded by Dr George Collins</span>
-    <span>Supporting clients across the UK</span>
-    <span>GMC-registered doctor</span>
-    <span>Complimentary discovery call</span>
-    <span>A personal plan, properly reviewed</span>
-  </div>
-</div>
 
 <nav>
   <div class="nav-inner">
@@ -153,6 +143,7 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
       <a href="/how-it-works">How It Works</a>
       <a href="/about">About</a>
       <a href="/for-coaches">For Coaches</a>
+      <a href="/insights">Insights</a>
       <a href="/apply" class="btn btn-gold" data-cta="nav"><span class="cta-long">Book a discovery call</span><span class="cta-short">Book a call</span></a>
     </div>
   </div>
@@ -221,14 +212,11 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
 
 <script src="/prosper-track.js"></script>
 <script>
-(function(){
-  var track = document.getElementById('tickerTrack');
-  track.innerHTML += track.innerHTML;
-})();
 document.getElementById('navToggle').addEventListener('click', function(){
   var open = document.getElementById('navLinks').classList.toggle('open');
   this.setAttribute('aria-expanded', open ? 'true' : 'false');
 });
 </script>
+<script src="/prosper-ui.js"></script>
 </body>
 </html>

@@ -441,19 +441,9 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
   .sticky-cta{transition:none}
 }
 </style>
+<link rel="stylesheet" href="/prosper.css">
 </head>
 <body>
-
-<div class="ticker" aria-hidden="true">
-  <div class="ticker-track" id="tickerTrack">
-    <span>Doctor-led longevity &amp; performance medicine</span>
-    <span>Founded by Dr George Collins</span>
-    <span>Supporting clients across the UK</span>
-    <span>GMC-registered doctor</span>
-    <span>Complimentary discovery call</span>
-    <span>A personal plan, properly reviewed</span>
-  </div>
-</div>
 
 <nav>
   <div class="nav-inner">
@@ -463,6 +453,7 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
     <div class="nav-links" id="navLinks">
       <a href="/how-it-works">How It Works</a>
       <a href="/for-coaches">For Coaches</a>
+      <a href="/insights">Insights</a>
       <a href="/about">About</a>
       <a href="/apply" class="btn btn-gold" data-cta="nav"><span class="cta-long">Book a discovery call</span><span class="cta-short">Book a call</span></a>
     </div>
@@ -473,7 +464,7 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
   <div class="container">
     <div class="eyebrow">Men's health over 40</div>
     <h1>Health after 40 for men: testosterone, ApoB and metabolic health</h1>
-    <p class="answer">For men over 40, three areas deserve a proper look: testosterone, ApoB as a measure of cardiovascular risk, and markers of metabolic health. Dr George Collins is a GMC-registered performance and longevity doctor who reviews all three together at Prosper, because a single number rarely means much without your history, symptoms and other results.</p>
+    <p class="answer">For men over 40, three areas deserve a proper look: testosterone, ApoB as a measure of cardiovascular risk, and markers of metabolic health.</p>
     <p class="byline">Written by Dr George Collins, GMC-registered doctor. Reviewed October 2026.</p>
   </div>
 </header>
@@ -481,6 +472,7 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
 <section class="why">
   <div class="container">
     <article class="prose">
+<p class="lead-in">Dr George Collins is a GMC-registered performance and longevity doctor who reviews all three together at Prosper, because a single number rarely means much without your history, symptoms and other results.</p>
 <h2>Testosterone: what it is and what a test can show</h2>
 <p>Testosterone is the main male sex hormone. It plays a part in energy, mood, libido, muscle, bone and recovery, and levels can change with age.</p><p>A blood test usually measures total testosterone, often alongside SHBG (a protein that binds it) and sometimes free testosterone, LH and FSH. Timing matters. Levels vary through the day and from one day to the next, so samples are normally taken in the morning and a single result is rarely the whole story.</p><p>Laboratories publish reference ranges, but where a number sits within one needs reading alongside symptoms, sleep, weight, alcohol, illness and medicines, all of which can influence a result. Dr George does not treat any single level as a target. If a result falls outside the laboratory range, GP review is advised. Any discussion of treatment requires a separate formal consultation.</p>
 <h2>ApoB: the cardiovascular marker worth understanding</h2>
@@ -537,7 +529,6 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
     <p>A short, no-obligation 15-minute video call with Dr George to talk through what you are looking for and whether Prosper is the right fit. Prosper is a private, self-funded service. The recommended pathway and all expected costs are explained clearly on your discovery call.</p>
     <div class="cta-btns">
       <a href="/apply" class="btn btn-gold" data-cta="article_cta">Book a discovery call</a>
-      <div class="cta-subline">A complimentary 15-minute video call with Dr George. No obligation.</div>
     </div>
   </div>
 </section>
@@ -584,10 +575,6 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
 
 <script src="/prosper-track.js"></script>
 <script>
-(function(){
-  var track = document.getElementById('tickerTrack');
-  track.innerHTML += track.innerHTML;
-})();
 document.getElementById('navToggle').addEventListener('click', function(){
   var open = document.getElementById('navLinks').classList.toggle('open');
   this.setAttribute('aria-expanded', open ? 'true' : 'false');
@@ -615,5 +602,6 @@ document.getElementById('navToggle').addEventListener('click', function(){
   update();
 })();
 </script>
+<script src="/prosper-ui.js"></script>
 </body>
 </html>

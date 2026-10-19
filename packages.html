@@ -349,21 +349,9 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.6);border-top:1px soli
   .credential-plaque img{max-height:56px}
 }
 </style>
+<link rel="stylesheet" href="/prosper.css">
 </head>
 <body>
-
-<!-- Benefits ticker -->
-<div class="ticker" aria-hidden="true">
-  <div class="ticker-track" id="tickerTrack">
-    <span>At-home blood testing</span>
-    <span>70 biomarkers as standard</span>
-    <span>One-hour doctor consultation</span>
-    <span>Personalised action plan</span>
-    <span>Full clinical report</span>
-    <span>GMC-registered doctor</span>
-    <span>Knowledge from elite sport</span>
-  </div>
-</div>
 
 <!-- Nav -->
 <nav>
@@ -375,6 +363,7 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.6);border-top:1px soli
       <a href="/how-it-works">How It Works</a>
       <a href="/about">About</a>
       <a href="/for-coaches">For Coaches</a>
+      <a href="/insights">Insights</a>
       <a href="#" class="btn btn-gold js-waitlist">Join the waitlist</a>
     </div>
   </div>
@@ -600,12 +589,6 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.6);border-top:1px soli
   }, 3200);
 })();
 
-// Duplicate ticker content for seamless loop
-(function(){
-  var track = document.getElementById('tickerTrack');
-  track.innerHTML += track.innerHTML;
-})();
-
 // Mobile nav
 document.getElementById('navToggle').addEventListener('click', function(){
   document.getElementById('navLinks').classList.toggle('open');
@@ -676,5 +659,6 @@ document.getElementById('navToggle').addEventListener('click', function(){
   });
 })();
 </script>
+<script src="/prosper-ui.js"></script>
 </body>
 </html>

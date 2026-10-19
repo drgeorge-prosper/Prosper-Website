@@ -211,20 +211,9 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
   .sticky-cta{transition:none}
 }
 </style>
+<link rel="stylesheet" href="/prosper.css">
 </head>
 <body>
-
-<!-- Benefits ticker -->
-<div class="ticker" aria-hidden="true">
-  <div class="ticker-track" id="tickerTrack">
-    <span>Doctor-led longevity &amp; performance medicine</span>
-    <span>Founded by Dr George Collins</span>
-    <span>Supporting clients across the UK</span>
-    <span>GMC-registered doctor</span>
-    <span>Complimentary discovery call</span>
-    <span>A personal plan, properly reviewed</span>
-  </div>
-</div>
 
 <!-- Nav -->
 <nav>
@@ -236,6 +225,7 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
       <a href="/how-it-works">How It Works</a>
       <a href="/about">About</a>
       <a href="/for-coaches">For Coaches</a>
+      <a href="/insights">Insights</a>
       <a href="/apply" class="btn btn-gold" data-cta="nav"><span class="cta-long">Book a discovery call</span><span class="cta-short">Book a call</span></a>
     </div>
   </div>
@@ -339,7 +329,6 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
     <p>A complimentary 15-minute discovery video call. No obligation, no medical questionnaire at this stage. And if Prosper is not the right fit for you, Dr George will tell you so on the call.</p>
     <div class="cta-btns">
       <a href="/apply" class="btn btn-gold">Book a discovery call</a>
-      <div class="cta-subline">A complimentary 15-minute video call with Dr George. No obligation.</div>
     </div>
     <p style="margin-top:28px;font-size:14px;color:rgba(244,239,230,.7)">See <a href="/how-it-works" style="text-decoration:underline">how the programme works</a>, or read more on <a href="/longevity-medicine-uk" style="text-decoration:underline">longevity medicine across the UK</a>.</p>
   </div>
@@ -400,10 +389,6 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
 <script src="/site-config.js"></script>
 <script src="/prosper-track.js"></script>
 <script>
-(function(){
-  var track = document.getElementById('tickerTrack');
-  track.innerHTML += track.innerHTML;
-})();
 document.getElementById('navToggle').addEventListener('click', function(){
   var open = document.getElementById('navLinks').classList.toggle('open');
   this.setAttribute('aria-expanded', open ? 'true' : 'false');
@@ -431,5 +416,6 @@ document.getElementById('navToggle').addEventListener('click', function(){
   update();
 })();
 </script>
+<script src="/prosper-ui.js"></script>
 </body>
 </html>
