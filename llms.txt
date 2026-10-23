@@ -14,7 +14,7 @@ Prosper complements a client's GP and coach. It does not replace primary care an
 
 ## How it works
 
-1. Apply at /apply and book a complimentary 15-minute video discovery call with Dr George. There is no obligation and no medical detail is needed at this stage.
+1. Apply at /apply with a short application. Suitable applicants are invited to a complimentary discovery call with Dr George. There is no obligation and no medical detail is needed at this stage.
 2. Secure onboarding, then one baseline blood panel completed close to home.
 3. A 60-minute doctor consultation, where history, goals and results are considered together.
 4. A written, personal action plan, followed by an 8 to 12 week implementation period.
@@ -31,13 +31,19 @@ Consultations are mostly virtual and available across the UK, with in-person app
 - [Executive health](https://prosper-clinic.com/executive-health): Doctor-led health review for executives and founders.
 - [For coaches and athletes](https://prosper-clinic.com/for-coaches): Prosper Performance, the performance-focused version of the programme, shared with a coach only with explicit client consent.
 - [Prosper Continuum](https://prosper-clinic.com/prosper-continuum): Structured ongoing support after Prosper Clarity.
-- [Book a discovery call](https://prosper-clinic.com/apply): Start here to book the complimentary 15-minute call.
+- [Apply to Prosper](https://prosper-clinic.com/apply): A short application, reviewed personally by Dr George. Suitable applicants are invited to a complimentary discovery call.
 
+
+## Articles
+
+- [What does a performance doctor actually do?](https://prosper-clinic.com/performance-doctor-uk): Dr George Collins explains the role, who it suits and how it fits alongside a GP.
+- [Training hard but not improving? The medical causes worth checking](https://prosper-clinic.com/training-hard-not-improving): Fuelling, iron, sleep, training load and hormones.
+- [Reading a blood test beyond the normal range](https://prosper-clinic.com/blood-test-beyond-normal-range): Trends, patterns between markers, timing and context.
 
 ## Policies
 
 - [Privacy policy](https://prosper-clinic.com/privacy): How personal information is collected, used and protected.
-- [Terms of use](https://prosper-clinic.com/terms): Terms for using the website and booking a discovery call.
+- [Terms of use](https://prosper-clinic.com/terms): Terms for using the website and applying to Prosper.
 - [Cancellations and rescheduling](https://prosper-clinic.com/cancellations): How to cancel or move a call or appointment.
 
 ## Contact

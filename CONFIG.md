@@ -36,6 +36,8 @@ Single source of truth for Prosper v2 configuration values. Runtime values consu
 /apply is the booking page. The sitemap lists every indexable page with a `lastmod` date.
 
 ## Booking flow (October 2026)
+Updated 23 Oct 2026: /apply is a short application form (Formspree, endpoint xvzerwyv). The Calendly booking embed is removed from the site for now; Dr George invites suitable applicants to a discovery call. No prescribing or medication wording anywhere on the site (George, 23 Oct 2026).
+
 /apply is the booking page: Calendly inline embed, no form. UTM parameters (or, if none, a utm_source worked out from the referring site, e.g. chatgpt.com, perplexity.ai, gemini.google.com, claude.ai, google) are passed to Calendly by prosper-track.js. Every site CTA reads "Book a discovery call" ("Book a call" in the mobile header).
 
 ## Routes (public, excluded from sitemap and nav)
