@@ -31,7 +31,7 @@ Single source of truth for Prosper v2 configuration values. Runtime values consu
 - PUBLIC_PRICE_COPY: "Prosper is a private, self-funded service. The recommended pathway and all expected costs are explained clearly before you decide whether to proceed." (the only public money sentence)
 
 ## Routes (public, in sitemap)
-/, /how-it-works, /about, /longevity-medicine-uk, /executive-health, /for-coaches, /prosper-continuum, /insights, /apply, /privacy, /terms, /cancellations
+/, /how-it-works, /about, /longevity-medicine-uk, /executive-health, /prosper-continuum, /insights, /apply, /privacy, /terms, /cancellations
 
 /apply is the booking page. The sitemap lists every indexable page with a `lastmod` date.
 
@@ -44,6 +44,7 @@ Updated 23 Oct 2026: /apply is a short application form (Formspree, endpoint xvz
 /apply/book (noindex). Now a thin redirect to /apply (meta refresh and JS), also forced with a 301 in `_redirects`. File left in place per the drag-upload workflow constraint.
 
 ## Routes removed from nav, force-redirected
+/for-coaches redirects to https://prosper-performance.com/ (301 in `_redirects`, 24 Oct 2026). Coach and personal trainer partnerships now live on the separate Prosper Performance site. `for-coaches.html` is a noindex stub that forwards there (meta refresh and JS, keeping UTMs). Every "For Coaches" nav and footer link points to https://prosper-performance.com/. The Person schema (`#dr-george`) carries `sameAs` to https://prosper-performance.com/ so search and AI tools treat both sites as the same doctor.
 /packages redirects to / (301, forced via `_redirects`). `packages.html` stays in the repo but is `noindex` with a canonical to `/`, and is not in the sitemap. The old pricing and 70-biomarker content in that file is never served.
 
 ## Analytics
