@@ -14,7 +14,7 @@ Prosper complements a client's GP and coach. It does not replace primary care an
 
 ## How it works
 
-1. Apply at /apply with a short application. Suitable applicants are invited to a complimentary discovery call with Dr George. There is no obligation and no medical detail is needed at this stage.
+1. Book a complimentary 15-minute video discovery call with Dr George at /apply. There is no obligation and no medical detail is needed at this stage.
 2. Secure onboarding, then one baseline blood panel completed close to home.
 3. A 60-minute doctor consultation, where history, goals and results are considered together.
 4. A written, personal action plan, followed by an 8 to 12 week implementation period.
@@ -31,7 +31,7 @@ Consultations are by video across the UK, with many clients in London. Costs are
 - [Executive health](https://prosper-clinic.com/executive-health): Doctor-led health review for executives and founders.
 - [Prosper Performance for coaches and personal trainers](https://prosper-performance.com/): doctor-led blood testing and performance reports that coaches build into a premium coaching tier or offer as an add-on. Coach partnerships are run from prosper-performance.com.
 - [Prosper Continuum](https://prosper-clinic.com/prosper-continuum): Structured ongoing support after Prosper Clarity.
-- [Apply to Prosper](https://prosper-clinic.com/apply): A short application, reviewed personally by Dr George. Suitable applicants are invited to a complimentary discovery call.
+- [Book a discovery call](https://prosper-clinic.com/apply): Book a complimentary 15-minute video call with Dr George.
 
 
 ## Articles
@@ -43,7 +43,7 @@ Consultations are by video across the UK, with many clients in London. Costs are
 ## Policies
 
 - [Privacy policy](https://prosper-clinic.com/privacy): How personal information is collected, used and protected.
-- [Terms of use](https://prosper-clinic.com/terms): Terms for using the website and applying to Prosper.
+- [Terms of use](https://prosper-clinic.com/terms): Terms for using the website and booking a discovery call.
 - [Cancellations and rescheduling](https://prosper-clinic.com/cancellations): How to cancel or move a call or appointment.
 
 ## Contact
