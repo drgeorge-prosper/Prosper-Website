@@ -9,7 +9,7 @@
 <meta name="description" content="Prosper Insights and Prosper Complete. Doctor-led performance and longevity assessments with transparent pricing and a 70-biomarker blood panel.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
 :root{
   --charcoal:#1A1815;
@@ -350,23 +350,25 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.6);border-top:1px soli
 }
 </style>
 <link rel="stylesheet" href="/prosper.css">
+<link rel="stylesheet" href="/clinic.css">
 </head>
 <body>
 
-<!-- Nav -->
-<nav>
-  <div class="nav-inner">
-    <a href="/" class="logo">PROSPER<span>.</span></a>
-    <button class="nav-toggle" id="navToggle" aria-label="Open menu">☰</button>
-    <div class="nav-links" id="navLinks">
-      <a href="/packages">Packages</a>
-      <a href="/how-it-works">How It Works</a>
+<div class="site-head" role="banner">
+  <div class="sh-inner">
+    <a href="/" class="sh-logo" aria-label="Prosper Clinic home"><span class="sh-word">PROSPER</span><span class="sh-rule"></span><span class="sh-sub">Clinic</span></a>
+    <a href="/apply" class="pill pill-gold sh-mobile-cta" data-cta="nav_mobile">Book a call</a>
+    <button class="sh-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">&#9776;</button>
+    <div class="sh-nav" id="navLinks" role="navigation" aria-label="Main">
+      <a href="/how-it-works">How it works</a>
       <a href="/about">About</a>
-      <a href="https://prosper-performance.com/" target="_blank" rel="noopener">For Coaches</a>
-      <a href="#" class="btn btn-gold js-waitlist">Join the waitlist</a>
+      <a href="/insights">Insights</a>
+      <a href="/#faqs">FAQs</a>
+      <a class="sh-alt" href="https://prosper-performance.com/" target="_blank" rel="noopener">For coaches</a>
+      <a href="/apply" class="pill pill-gold sh-cta" data-cta="nav">Book a call</a>
     </div>
   </div>
-</nav>
+</div>
 
 <!-- Page hero -->
 <header class="page-hero">
@@ -523,21 +525,28 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.6);border-top:1px soli
 </section>
 
 <!-- Footer -->
-<footer>
-  <div class="container">
-    <div class="foot-grid">
-      <a href="/" class="logo" style="color:var(--bone)">PROSPER<span>.</span></a>
-      <p class="foot-tag">Performance &amp; longevity doctor · London and UK-wide</p>
-      <div class="foot-links">
-        <a href="/packages">Packages</a>
-        <a href="/how-it-works">How It Works</a>
-        <a href="/about">About</a>
-        <a href="https://prosper-performance.com/" target="_blank" rel="noopener">For Coaches</a>
-        <a href="/privacy">Privacy Policy</a>
-        <a href="/terms">Terms</a>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="sf-top">
+      <div>
+        <a href="/" class="sh-logo" aria-label="Prosper Clinic home"><span class="sh-word">PROSPER</span><span class="sh-rule"></span><span class="sh-sub">Clinic</span></a>
+        <div class="sf-tag">Performance &amp; longevity doctor &middot; London and UK-wide</div>
       </div>
+      <nav class="sf-links" aria-label="Footer">
+        <a href="/how-it-works">How it works</a>
+        <a href="/about">About</a>
+        <a href="/insights">Insights</a>
+        <a href="/longevity-medicine-uk">Longevity medicine UK</a>
+        <a href="/executive-health">Executive health</a>
+        <a href="/prosper-continuum">Prosper Continuum</a>
+        <a href="https://prosper-performance.com/" target="_blank" rel="noopener">For coaches</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="/cancellations">Cancellations</a>
+        <a href="/apply">Book a discovery call</a>
+      </nav>
     </div>
-    <p class="foot-legal">Prosper Performance Medicine is a doctor-led consultation service. Assessments are not a replacement for NHS GP care. Out-of-range results are referred to your GP for follow-up. Dr George Collins is registered with the General Medical Council. © 2025 Prosper Performance Medicine.</p>
+    <p class="sf-legal">Prosper Performance Medicine is a doctor-led consultation service. Assessments are not a replacement for NHS GP care. Out-of-range results are referred to your GP for follow-up. Dr George Collins is registered with the General Medical Council. © 2025 Prosper Performance Medicine.</p>
   </div>
 </footer>
 

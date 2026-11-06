@@ -33,7 +33,7 @@
 <link rel="preconnect" href="https://calendly.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
 :root{
   --charcoal:#1A1815;
@@ -156,23 +156,25 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
 }
 </style>
 <link rel="stylesheet" href="/prosper.css">
+<link rel="stylesheet" href="/clinic.css">
 </head>
 <body>
 
-<!-- Nav -->
-<nav>
-  <div class="nav-inner">
-    <a href="/" class="logo">PROSPER<span>.</span></a>
-    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">☰</button>
-    <div class="nav-links" id="navLinks">
-      <a href="/how-it-works">How It Works</a>
+<div class="site-head" role="banner">
+  <div class="sh-inner">
+    <a href="/" class="sh-logo" aria-label="Prosper Clinic home"><span class="sh-word">PROSPER</span><span class="sh-rule"></span><span class="sh-sub">Clinic</span></a>
+    <a href="/apply" class="pill pill-gold sh-mobile-cta" data-cta="nav_mobile">Book a call</a>
+    <button class="sh-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">&#9776;</button>
+    <div class="sh-nav" id="navLinks" role="navigation" aria-label="Main">
+      <a href="/how-it-works">How it works</a>
       <a href="/about">About</a>
-      <a href="https://prosper-performance.com/" target="_blank" rel="noopener">For Coaches</a>
       <a href="/insights">Insights</a>
-      <a href="/apply" class="btn btn-gold" data-cta="nav" aria-current="page"><span class="cta-long">Book a discovery call</span><span class="cta-short">Book a call</span></a>
+      <a href="/#faqs">FAQs</a>
+      <a class="sh-alt" href="https://prosper-performance.com/" target="_blank" rel="noopener">For coaches</a>
+      <a href="/apply" class="pill pill-gold sh-cta" data-cta="nav">Book a call</a>
     </div>
   </div>
-</nav>
+</div>
 
 <!-- Booking hero -->
 <header class="book-hero">
@@ -218,25 +220,28 @@ footer{background:var(--charcoal);color:rgba(244,239,230,.75);border-top:1px sol
 </main>
 
 <!-- Footer -->
-<footer>
-  <div class="container">
-    <div class="foot-grid">
-      <a href="/" class="logo" style="color:var(--bone)">PROSPER<span>.</span></a>
-      <p class="foot-tag">Performance &amp; longevity doctor · London and UK-wide</p>
-      <div class="foot-links">
-        <a href="/how-it-works">How It Works</a>
-        <a href="https://prosper-performance.com/" target="_blank" rel="noopener">For Coaches</a>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="sf-top">
+      <div>
+        <a href="/" class="sh-logo" aria-label="Prosper Clinic home"><span class="sh-word">PROSPER</span><span class="sh-rule"></span><span class="sh-sub">Clinic</span></a>
+        <div class="sf-tag">Performance &amp; longevity doctor &middot; London and UK-wide</div>
+      </div>
+      <nav class="sf-links" aria-label="Footer">
+        <a href="/how-it-works">How it works</a>
         <a href="/about">About</a>
-        <a href="/longevity-medicine-uk">Longevity Medicine UK</a>
-        <a href="/executive-health">Executive Health</a>
-        <a href="/prosper-continuum">Prosper Continuum</a>
         <a href="/insights">Insights</a>
-        <a href="/privacy">Privacy Policy</a>
+        <a href="/longevity-medicine-uk">Longevity medicine UK</a>
+        <a href="/executive-health">Executive health</a>
+        <a href="/prosper-continuum">Prosper Continuum</a>
+        <a href="https://prosper-performance.com/" target="_blank" rel="noopener">For coaches</a>
+        <a href="/privacy">Privacy</a>
         <a href="/terms">Terms</a>
         <a href="/cancellations">Cancellations</a>
-      </div>
+        <a href="/apply">Book a discovery call</a>
+      </nav>
     </div>
-    <p class="foot-legal">Prosper is a private, doctor-led longevity and performance practice provided by Dr G Collins Ltd, a company registered in England and Wales, company number 16388031. Registered office: 71-75 Shelton Street, Covent Garden, London WC2H 9JQ. This website provides general information only and is not medical advice; if you are unwell, contact your GP or NHS 111, and in an emergency call 999. Dr George Collins is registered with the General Medical Council. Contact: <a href="mailto:drgeorge@prosper-clinic.com" style="color:inherit;text-decoration:underline">drgeorge@prosper-clinic.com</a>. © 2026 Dr G Collins Ltd.</p>
+    <p class="sf-legal">Prosper is a private, doctor-led longevity and performance practice provided by Dr G Collins Ltd, a company registered in England and Wales, company number 16388031. Registered office: 71-75 Shelton Street, Covent Garden, London WC2H 9JQ. This website provides general information only and is not medical advice; if you are unwell, contact your GP or NHS 111, and in an emergency call 999. Dr George Collins is registered with the General Medical Council. Contact: <a href="mailto:drgeorge@prosper-clinic.com" style="color:inherit;text-decoration:underline">drgeorge@prosper-clinic.com</a>. © 2026 Dr G Collins Ltd.</p>
   </div>
 </footer>
 
