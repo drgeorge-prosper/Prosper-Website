@@ -274,3 +274,11 @@ footer.site-foot{background:var(--ink)!important;color:rgba(244,239,230,.7)!impo
   .cards-3 .card-top h3{margin:0 0 4px;font-size:22px}
   .trustbar li{width:100%}
 }
+
+/* ---------- Who it's for: plain list ---------- */
+.worries{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.worries li{display:grid;grid-template-columns:44px 1fr;gap:18px;padding:22px 0;border-bottom:1px solid var(--line);align-items:start}
+.worries b{display:block;font-family:var(--serif);font-size:24px;font-weight:600;line-height:1.2;margin-bottom:4px}
+.worries p{font-size:15.5px;color:var(--text-2);line-height:1.6}
+@media (max-width:600px){.worries li{padding:18px 0;gap:14px}.worries b{font-size:22px}}
+.hero3 .h-xl{font-size:clamp(42px,5vw,68px);line-height:1.04}

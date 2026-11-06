@@ -53,7 +53,7 @@
   <div class="wrap">
     <div>
       <span class="kicker"><span class="dot"></span>Discovery calls now open</span>
-      <h1 class="h-xl">The clinical picture behind <em class="rotator" id="rotator">your next decade.</em></h1>
+      <h1 class="h-xl">Stay sharp, strong and ahead of your health <em>for the next 20 years.</em></h1>
       <p class="lede">A personalised longevity and performance programme led by Dr George Collins, a Sports and Exercise Medicine Doctor working across Professional Rugby, Longevity Medical Education and Primary Care.</p>
       <div class="ctas">
         <a href="/apply" class="pill pill-gold" data-cta="hero">Book a discovery call</a>
@@ -96,17 +96,18 @@
   <div class="wrap split">
     <div class="rv">
       <span class="kicker">Who it's for</span>
-      <h2 class="h-lg">For people who carry a lot, and intend to keep carrying it well.</h2>
-      <p class="lede" style="margin-top:22px">Prosper is a private, doctor-led longevity and performance practice for people in London and across the UK. It starts with a complimentary discovery call with Dr George.</p>
+      <h2 class="h-lg">If any of this sounds familiar, start with a call.</h2>
+      <p class="lede" style="margin-top:22px">Prosper is a private, doctor-led practice for people in London and across the UK who want a clear answer on their health and a plan that fits a demanding week.</p>
+      <a href="/apply" class="pill pill-dark" style="margin-top:30px" data-cta="who">Book a discovery call</a>
     </div>
-    <div class="cards-2 rv">
-      <div class="card"><p class="statement">You run a business or lead a team, and your diary is full</p></div>
-      <div class="card"><p class="statement">You want to stay sharp, strong and ahead of your health</p></div>
-      <div class="card"><p class="statement">You value a doctor's judgement on what your results mean</p></div>
-      <div class="card"><p class="statement">You want a clear plan that fits a demanding week</p></div>
-      <div class="card"><p class="statement">You train seriously and want to understand your recovery</p></div>
-      <div class="card"><p class="statement">You want a proper baseline while you feel well</p></div>
-    </div>
+    <ul class="worries rv">
+      <li><span class="ic" aria-hidden="true"><svg><use href="/icons.svg#i-energy"/></svg></span><div><b>Your energy drops off</b><p>You are flat by mid-afternoon and coffee is doing more of the work than it used to.</p></div></li>
+      <li><span class="ic" aria-hidden="true"><svg><use href="/icons.svg#i-heart"/></svg></span><div><b>Heart risk</b><p>You want to know where you really stand on cholesterol, blood pressure and blood sugar.</p></div></li>
+      <li><span class="ic" aria-hidden="true"><svg><use href="/icons.svg#i-dna"/></svg></span><div><b>Family history</b><p>Heart disease, diabetes or early illness runs in the family and you want to get ahead of it.</p></div></li>
+      <li><span class="ic" aria-hidden="true"><svg><use href="/icons.svg#i-hormone"/></svg></span><div><b>Hormones</b><p>Your drive, mood, sleep or recovery have changed and you want them looked at properly.</p></div></li>
+      <li><span class="ic" aria-hidden="true"><svg><use href="/icons.svg#i-muscle"/></svg></span><div><b>Staying strong</b><p>You train, but muscle, fitness and body composition are harder to hold on to.</p></div></li>
+      <li><span class="ic" aria-hidden="true"><svg><use href="/icons.svg#i-target"/></svg></span><div><b>Staying sharp at work</b><p>Focus, memory and stamina matter to your business and you want to protect them.</p></div></li>
+    </ul>
   </div>
 </section>
 
@@ -295,23 +296,6 @@
 <script src="/site-config.js"></script>
 <script src="/prosper-track.js"></script>
 <script>
-// Hero word rotator
-(function(){
-  var words = ["your next decade.","your energy.","your longevity.","your recovery.","your performance."];
-  var el = document.getElementById('rotator');
-  if (!el) return;
-  var i = 0;
-  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduced) return;
-  setInterval(function(){
-    el.classList.add('is-out');
-    setTimeout(function(){
-      i = (i + 1) % words.length;
-      el.textContent = words[i];
-      el.classList.remove('is-out');
-    }, 450);
-  }, 3200);
-})();
 
 // Mobile nav
 document.getElementById('navToggle').addEventListener('click', function(){
