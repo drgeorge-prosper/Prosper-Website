@@ -375,3 +375,156 @@ footer.site-foot{background:var(--ink)!important;color:rgba(244,239,230,.7)!impo
 
 /* About: two-card grid stacks on phones (inline style forced two columns) */
 @media (max-width:600px){.coach-grid{grid-template-columns:1fr!important}}
+
+/* =========================================================
+   Elite visuals (November 2026): brighter gold, light-filled
+   sections, aurora glow, gold dust, sheen and glass. The
+   aurora, dust and spotlight are injected by prosper-ui.js.
+   Everything still stops for reduced motion.
+   ========================================================= */
+:root{
+  --gold-lum:#E6C384;
+  --champagne:#F4E2BC;
+  --gold-grad:linear-gradient(135deg,#B8874A 0%,#E9C98B 38%,#F7E3B5 50%,#D7AE6A 64%,#B98A4C 100%);
+  --gold-text:linear-gradient(100deg,#C99A55 0%,#F3D9A2 30%,#FFF1CF 46%,#E3B873 62%,#C99A55 100%);
+  --paper:#FFFCF7;
+  --bone:#F8F1E5;
+}
+/* Dark sections: deeper, warmer, lit from within */
+.hero3,.page-hero,.cta,.sec-dark,#how,#about{background:radial-gradient(1200px 700px at 82% 8%,rgba(214,170,98,.20),transparent 60%),radial-gradient(900px 600px at 6% 100%,rgba(176,120,72,.14),transparent 60%),linear-gradient(180deg,#17140F 0%,#1D1913 55%,#16130E 100%)!important}
+.hero3::before{display:none}
+.page-hero::before{opacity:0}
+/* Light sections: brighter, with a warm glow */
+.sec-paper{background:radial-gradient(900px 520px at 100% 0%,rgba(233,201,139,.18),transparent 62%),radial-gradient(700px 480px at 0% 100%,rgba(244,226,188,.35),transparent 60%),var(--paper)}
+.sec-bone{background:radial-gradient(1000px 600px at 85% 10%,rgba(233,201,139,.26),transparent 62%),radial-gradient(800px 500px at 5% 95%,rgba(255,255,255,.9),transparent 60%),linear-gradient(180deg,#FBF5EA,#F5EBDA)}
+.sec-white{background:#FFFDF9}
+
+/* Aurora: slow drifting light */
+.lx-aura{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.lx-aura i{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;mix-blend-mode:screen;will-change:transform}
+.lx-aura i:nth-child(1){width:560px;height:560px;right:-120px;top:-180px;background:radial-gradient(circle,rgba(240,200,130,.55),transparent 65%);animation:lxDrift1 18s ease-in-out infinite}
+.lx-aura i:nth-child(2){width:460px;height:460px;left:-140px;bottom:-200px;background:radial-gradient(circle,rgba(212,140,90,.42),transparent 65%);animation:lxDrift2 22s ease-in-out infinite}
+.lx-aura i:nth-child(3){width:380px;height:380px;left:38%;top:20%;background:radial-gradient(circle,rgba(255,236,196,.28),transparent 65%);animation:lxDrift3 26s ease-in-out infinite}
+@keyframes lxDrift1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-90px,60px) scale(1.12)}}
+@keyframes lxDrift2{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(120px,-50px) scale(1.18)}}
+@keyframes lxDrift3{0%,100%{transform:translate(0,0) scale(.9)}50%{transform:translate(-60px,-40px) scale(1.1)}}
+/* Gold dust canvas and pointer spotlight */
+.lx-dust{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.lx-spot{position:absolute;inset:0;pointer-events:none;z-index:0;opacity:0;transition:opacity .6s ease;background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgba(246,214,150,.13),transparent 60%)}
+.lx-lit .lx-spot{opacity:1}
+.hero3 > .wrap,#how > .wrap,#about > .wrap,.sec-dark > .wrap{position:relative;z-index:1}
+#how,#about,.sec-dark{position:relative;overflow:hidden}
+
+/* Helix: brighter and glowing */
+.lx-helix{filter:drop-shadow(0 0 6px rgba(240,200,130,.55))}
+.lx-hero-helix{opacity:1}
+.page-hero .lx-ph-helix{opacity:.8}
+.lx-cta-helix{opacity:.55}
+.band .lx-helix{filter:none}
+
+/* Gold type */
+.hero3 h1 em,.page-hero h1 em,.lx-gold{background:var(--gold-text);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent!important;-webkit-text-fill-color:transparent;animation:lxShine 7s ease-in-out infinite}
+@keyframes lxShine{0%,100%{background-position:100% 0}50%{background-position:0 0}}
+.steps3 .n{background:var(--gold-text);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:lxShine 9s ease-in-out infinite}
+.kicker,.eyebrow{display:inline-flex!important;align-items:center;gap:0}
+.kicker::before,.eyebrow::before{content:"";display:inline-block;width:22px;height:1px;margin-right:12px;background:linear-gradient(90deg,transparent,currentColor)}
+.kicker:has(.dot)::before{display:none}
+.band .kicker::before{background:linear-gradient(90deg,transparent,var(--ink))}
+
+/* Buttons: metallic gold with a sheen */
+.pill-gold,.btn-gold{background:var(--gold-grad)!important;background-size:200% 100%!important;border-color:rgba(255,230,180,.6)!important;color:#1A1510!important;position:relative;overflow:hidden;
+  box-shadow:0 10px 30px -8px rgba(226,178,104,.6),inset 0 1px 0 rgba(255,248,230,.7);transition:transform .25s ease,box-shadow .25s ease,background-position .6s ease!important}
+.pill-gold:hover,.btn-gold:hover{background-position:100% 0!important;box-shadow:0 16px 40px -8px rgba(236,190,112,.75),inset 0 1px 0 rgba(255,248,230,.8)}
+.pill-gold::after,.btn-gold::after,.pill-dark::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);animation:lxSheen 4.8s ease-in-out infinite;pointer-events:none}
+.pill-dark{position:relative;overflow:hidden;box-shadow:0 12px 30px -10px rgba(26,24,21,.55)}
+.pill-dark::after{background:linear-gradient(100deg,transparent,rgba(240,200,130,.35),transparent)}
+@keyframes lxSheen{0%,55%{left:-60%}85%,100%{left:130%}}
+.pill-ghost,.btn-outline-light{backdrop-filter:blur(6px);background:rgba(255,245,225,.04)!important}
+.pill-ghost:hover,.btn-outline-light:hover{border-color:var(--gold-lum)!important;box-shadow:0 0 0 4px rgba(230,195,132,.12)}
+
+/* Header: glass with a gold hairline */
+.site-head{background:rgba(22,19,14,.82);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:0}
+.site-head::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(230,195,132,.55),transparent)}
+.sh-sub{color:var(--gold-lum)}
+
+/* Hero card: glass with a living gold edge */
+.tilt{background:linear-gradient(160deg,rgba(255,240,210,.10),rgba(255,240,210,.03) 40%,rgba(20,17,12,.55))!important;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(240,205,140,.28)!important;border-radius:14px!important;
+  box-shadow:0 50px 100px -20px rgba(0,0,0,.6),0 0 0 1px rgba(255,235,200,.05) inset,0 0 80px -20px rgba(230,180,100,.35)!important;overflow:hidden}
+.tilt::before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;background:conic-gradient(from var(--lx-ang,0deg),transparent 0 70%,rgba(255,226,160,.95) 80%,transparent 90%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:lxSpin 6s linear infinite;pointer-events:none}
+@property --lx-ang{syntax:'<angle>';initial-value:0deg;inherits:false}
+@keyframes lxSpin{to{--lx-ang:360deg}}
+.tilt::after{content:"";position:absolute;top:-40%;left:-80%;width:60%;height:180%;background:linear-gradient(100deg,transparent,rgba(255,240,210,.10),transparent);transform:rotate(12deg);animation:lxGlass 9s ease-in-out infinite;pointer-events:none}
+@keyframes lxGlass{0%,60%{left:-80%}100%{left:140%}}
+.tilt .ticks li::before{filter:drop-shadow(0 0 4px rgba(240,200,130,.8))}
+.doc-chip{background:rgba(255,240,210,.04);border-color:rgba(230,195,132,.3);backdrop-filter:blur(8px)}
+.doc-chip img{box-shadow:0 0 0 2px #17140F,0 0 0 3px rgba(240,205,140,.8),0 0 24px rgba(240,200,130,.4)}
+.kicker .dot{background:var(--gold-lum);box-shadow:0 0 10px rgba(240,200,130,.9)}
+
+/* Trust bar */
+.trustbar{position:relative;background:linear-gradient(180deg,#16130E,#1B1712)!important}
+.trustbar::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,transparent,rgba(230,195,132,.5),transparent)}
+.trustbar li{color:rgba(248,236,214,.78)}
+.lx-tic{stroke:var(--gold-lum);filter:drop-shadow(0 0 5px rgba(240,200,130,.55))}
+
+/* Icons on light sections: champagne medallions */
+.ic,.lx-ic{background:linear-gradient(145deg,#FFF6E4,#F1D9AA)!important;color:#8A6330!important;box-shadow:0 6px 16px -6px rgba(194,140,70,.45),inset 0 1px 0 #fff;transition:transform .35s ease,box-shadow .35s ease}
+.lx-step-ic{color:var(--gold-lum);background:radial-gradient(circle at 30% 30%,rgba(255,226,170,.25),rgba(194,154,91,.08));box-shadow:inset 0 0 0 1px rgba(240,205,140,.45),0 0 22px -4px rgba(240,200,130,.55);animation:lxPulse 3.6s ease-in-out infinite}
+.steps3 > div:nth-child(2) .lx-step-ic{animation-delay:.9s}.steps3 > div:nth-child(3) .lx-step-ic{animation-delay:1.8s}.steps3 > div:nth-child(4) .lx-step-ic{animation-delay:2.7s}
+@keyframes lxPulse{0%,100%{box-shadow:inset 0 0 0 1px rgba(240,205,140,.45),0 0 18px -6px rgba(240,200,130,.45)}50%{box-shadow:inset 0 0 0 1px rgba(255,226,170,.9),0 0 30px 0 rgba(240,200,130,.6)}}
+
+/* Cards: lifted, with a gold edge on hover */
+.card,.lx-area{border-radius:12px!important;border-color:rgba(194,154,91,.18)!important;box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 18px 40px -24px rgba(120,84,36,.28);position:relative;background:linear-gradient(180deg,#FFFFFF,#FFFCF6)}
+.card-dark{background:radial-gradient(500px 300px at 90% 0%,rgba(230,190,120,.18),transparent 60%),linear-gradient(180deg,#1F1A13,#16130E)!important;border-color:rgba(230,195,132,.25)!important}
+.card:hover,.lx-area:hover{transform:translateY(-6px);border-color:rgba(214,170,98,.55)!important;box-shadow:0 30px 60px -24px rgba(150,100,40,.38),0 0 0 1px rgba(230,195,132,.35)}
+.card:hover .ic,.lx-area:hover .lx-ic{transform:scale(1.08) rotate(-4deg);box-shadow:0 10px 24px -6px rgba(214,160,80,.6),inset 0 1px 0 #fff}
+.lx-area::before{content:"";position:absolute;left:18px;right:18px;top:0;height:2px;border-radius:2px;background:var(--gold-grad);transform:scaleX(0);transform-origin:left;transition:transform .45s ease}
+.lx-area:hover::before{transform:scaleX(1)}
+.worries li{transition:background .3s ease,padding .3s ease}
+.worries li:hover{background:linear-gradient(90deg,rgba(244,226,188,.35),transparent);padding-left:12px}
+.notebox{border-radius:12px;border-color:rgba(194,154,91,.2);box-shadow:0 18px 40px -26px rgba(120,84,36,.3)}
+
+/* Chart: glow and a travelling pulse */
+.lx-chart{border-radius:14px!important;border-color:rgba(194,154,91,.22)!important;box-shadow:0 40px 80px -30px rgba(150,100,40,.35),0 0 0 6px rgba(255,255,255,.5)!important}
+.lx-chart .lx-draw{filter:drop-shadow(0 0 5px rgba(226,170,90,.65))}
+.lx-pulse{opacity:0;transition:opacity .6s ease 2.4s}
+.lx-in .lx-pulse{opacity:1}
+
+/* Steps connector: a light travelling along it */
+.steps3.lx-flow::after{content:"";position:absolute;top:-2px;left:0;width:140px;height:4px;border-radius:4px;background:radial-gradient(closest-side,rgba(255,236,190,1),rgba(240,200,130,.5) 60%,transparent);filter:blur(1px);opacity:0;animation:lxTravel 5s ease-in-out 2s infinite}
+@keyframes lxTravel{0%{transform:translateX(-140px);opacity:0}10%{opacity:1}90%{opacity:1}100%{transform:translateX(var(--lx-w,1100px));opacity:0}}
+@media (max-width:600px){.steps3.lx-flow::after{display:none}}
+
+/* About photo: gold frame and glow */
+.about3 .photo{border-radius:14px;position:relative;box-shadow:0 0 0 1px rgba(240,205,140,.45),0 40px 80px -30px rgba(0,0,0,.7),0 0 90px -20px rgba(230,180,100,.45)}
+.facts b svg{filter:drop-shadow(0 0 5px rgba(240,200,130,.6));stroke:var(--gold-lum)}
+.facts > div{border-top:1px solid transparent;border-image:linear-gradient(90deg,rgba(230,195,132,.45),transparent) 1}
+
+/* Band: metallic gold with a moving sheen */
+.band{background:linear-gradient(120deg,#C08E4C 0%,#E7C27F 30%,#F6DFAE 48%,#E2B970 64%,#C49453 100%)!important;background-size:200% 100%!important;animation:lxBand 12s ease-in-out infinite;border-radius:18px;box-shadow:0 40px 90px -30px rgba(226,170,90,.55),inset 0 1px 0 rgba(255,250,235,.7)}
+@keyframes lxBand{0%,100%{background-position:0 0}50%{background-position:100% 0}}
+.band::before{content:"";position:absolute;top:0;bottom:0;left:-40%;width:30%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-18deg);animation:lxSheen 7s ease-in-out infinite;pointer-events:none}
+
+/* Staggered reveal for grids */
+.lx-areas.rv > *,.worries > li{transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.lx-areas.rv:not(.in) > *{opacity:0;transform:translateY(22px)}
+.lx-areas.rv{opacity:1!important;transform:none!important}
+.lx-areas > *:nth-child(2){transition-delay:.07s}.lx-areas > *:nth-child(3){transition-delay:.14s}.lx-areas > *:nth-child(4){transition-delay:.21s}
+.lx-areas > *:nth-child(5){transition-delay:.28s}.lx-areas > *:nth-child(6){transition-delay:.35s}.lx-areas > *:nth-child(7){transition-delay:.42s}.lx-areas > *:nth-child(8){transition-delay:.49s}
+.lx-areas.in > *:hover{transition-delay:0s}
+
+/* Footer hairline */
+footer.site-foot{position:relative;background:radial-gradient(900px 400px at 50% 0%,rgba(214,170,98,.12),transparent 60%),#14110D!important;border-top:0}
+footer.site-foot::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,transparent,rgba(230,195,132,.55),transparent)}
+
+@media (max-width:600px){
+  .lx-aura i{filter:blur(50px);opacity:.45}
+  .lx-aura i:nth-child(1){width:360px;height:360px}
+  .band{border-radius:14px}
+}
+@media (prefers-reduced-motion:reduce){
+  .lx-aura i,.hero3 h1 em,.page-hero h1 em,.lx-gold,.steps3 .n,.pill-gold::after,.btn-gold::after,.pill-dark::after,.tilt::before,.tilt::after,.lx-step-ic,.band,.band::before,.steps3.lx-flow::after{animation:none!important}
+  .lx-areas.rv:not(.in) > *{opacity:1;transform:none}
+  .lx-pulse{display:none}
+}
+html,body{overflow-x:clip}
+.credential-plaque{max-width:100%;box-sizing:border-box}

@@ -83,3 +83,8 @@ Trivial edit to trigger the first Netlify branch-deploy build for prosper-v2, 21
 - `prosper-ui.js` injects an animated DNA helix (SVG, requestAnimationFrame, paused off screen, still for reduced motion) into the homepage hero, every `.page-hero`, every `.cta` and the homepage gold `.band`. No markup needed on new pages that use those classes.
 - Homepage: icons in the trust bar, steps and About facts; new "The science" section (`#science`) with the healthspan chart and eight review areas. The longevity medicine page carries the same chart.
 - The healthspan chart is labelled illustrative and carries no figures. Keep it that way. The review areas are examples; testing is still chosen per person, never shown as a fixed panel or a biomarker count.
+
+## Elite visuals (November 2026)
+- Brighter metallic gold (`--gold-lum`, `--gold-grad`, `--gold-text`), warmer light sections, glass header and hero card.
+- prosper-ui.js adds aurora light, rising gold dust (canvas) and a pointer glow to dark heroes, CTAs, How it works and About, plus a pulse along the healthspan curve.
+- All motion stops for reduced motion; dust pauses off screen.

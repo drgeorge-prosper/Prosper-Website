@@ -70,7 +70,7 @@
     return s;
   }
   function grid(light){ var d = document.createElement('div'); d.className = 'lx-grid' + (light ? ' lx-grid-light' : ''); d.setAttribute('aria-hidden', 'true'); return d; }
-  var gold = '#C29A5B', bone = 'rgba(244,239,230,.9)', faint = 'rgba(244,239,230,.16)';
+  var gold = '#E6C384', bone = 'rgba(255,244,222,.95)', faint = 'rgba(244,222,180,.22)';
   try {
     var hero = document.querySelector('.hero3');
     if (hero) {
@@ -110,4 +110,91 @@
     es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('lx-in'); io.unobserve(e.target); } });
   }, {threshold: 0.25});
   obs.forEach(function(el){ io.observe(el); });
+})();
+
+// Elite visuals: aurora light, rising gold dust, a soft pointer glow on dark
+// sections, and a pulse that travels along the healthspan curve. Dust pauses
+// off screen; none of it runs for visitors who ask for reduced motion.
+(function(){
+  var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var finePointer = window.matchMedia && window.matchMedia('(pointer: fine)').matches;
+  var targets = document.querySelectorAll('.hero3, .page-hero, .cta, #how, #about');
+  var fields = [];
+  function aura(host){
+    var a = document.createElement('div'); a.className = 'lx-aura'; a.setAttribute('aria-hidden', 'true');
+    a.innerHTML = '<i></i><i></i><i></i>'; host.insertBefore(a, host.firstChild);
+  }
+  function dust(host, density){
+    var c = document.createElement('canvas'); c.className = 'lx-dust'; c.setAttribute('aria-hidden', 'true');
+    host.insertBefore(c, host.firstChild.nextSibling);
+    var f = {c: c, ctx: c.getContext('2d'), host: host, ps: [], visible: false, density: density};
+    f.size = function(){
+      var r = host.getBoundingClientRect(), d = Math.min(window.devicePixelRatio || 1, 2);
+      c.width = Math.round(r.width * d); c.height = Math.round(r.height * d); f.d = d; f.w = r.width; f.h = r.height;
+      var n = Math.round(Math.min(90, (r.width * r.height) / 14000 * f.density));
+      f.ps = []; for (var i = 0; i < n; i++) f.ps.push(f.spawn(true));
+    };
+    f.spawn = function(any){
+      return {x: Math.random() * f.w, y: any ? Math.random() * f.h : f.h + 10, r: Math.random() * 1.6 + .4,
+        v: Math.random() * .25 + .08, sway: Math.random() * 6.28, a: Math.random() * .5 + .25, tw: Math.random() * 6.28};
+    };
+    f.draw = function(t){
+      var x = f.ctx; x.setTransform(f.d, 0, 0, f.d, 0, 0); x.clearRect(0, 0, f.w, f.h);
+      for (var i = 0; i < f.ps.length; i++) {
+        var p = f.ps[i]; p.y -= p.v; p.sway += .01;
+        if (p.y < -10) f.ps[i] = p = f.spawn(false);
+        var px = p.x + Math.sin(p.sway) * 14, al = p.a * (.55 + .45 * Math.sin(t * 1.6 + p.tw));
+        var g = x.createRadialGradient(px, p.y, 0, px, p.y, p.r * 5);
+        g.addColorStop(0, 'rgba(255,232,180,' + al.toFixed(3) + ')'); g.addColorStop(1, 'rgba(240,200,130,0)');
+        x.fillStyle = g; x.beginPath(); x.arc(px, p.y, p.r * 5, 0, 6.283); x.fill();
+      }
+    };
+    fields.push(f); return f;
+  }
+  function spot(host){
+    var s = document.createElement('div'); s.className = 'lx-spot'; s.setAttribute('aria-hidden', 'true');
+    host.insertBefore(s, host.firstChild);
+    host.addEventListener('pointermove', function(e){
+      var r = host.getBoundingClientRect();
+      host.style.setProperty('--mx', (e.clientX - r.left) + 'px'); host.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      host.classList.add('lx-lit');
+    });
+    host.addEventListener('pointerleave', function(){ host.classList.remove('lx-lit'); });
+  }
+  try {
+    targets.forEach(function(t){
+      if (getComputedStyle(t).position === 'static') t.style.position = 'relative';
+      t.style.overflow = 'hidden';
+      aura(t);
+      if (!still) dust(t, t.classList.contains('hero3') ? 1.4 : 1);
+      if (!still && finePointer && (t.classList.contains('hero3') || t.classList.contains('page-hero'))) spot(t);
+    });
+  } catch (e) {}
+  if (fields.length && window.requestAnimationFrame) {
+    fields.forEach(function(f){ f.size(); });
+    var rt; window.addEventListener('resize', function(){ clearTimeout(rt); rt = setTimeout(function(){ fields.forEach(function(f){ f.size(); }); }, 200); });
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function(es){ es.forEach(function(e){ fields.forEach(function(f){ if (f.host === e.target) f.visible = e.isIntersecting; }); }); });
+      fields.forEach(function(f){ io.observe(f.host); });
+    } else fields.forEach(function(f){ f.visible = true; });
+    (function loop(ts){
+      var t = ts / 1000;
+      if (!document.hidden) fields.forEach(function(f){ if (f.visible) f.draw(t); });
+      requestAnimationFrame(loop);
+    })(performance.now());
+  }
+  // Steps connector: let the travelling light run the full width
+  document.querySelectorAll('.steps3.lx-flow').forEach(function(s){
+    var set = function(){ s.style.setProperty('--lx-w', s.offsetWidth + 'px'); }; set();
+    window.addEventListener('resize', set);
+  });
+  // Healthspan chart: a glowing pulse that runs along the aim curve
+  if (!still) document.querySelectorAll('.lx-chart svg').forEach(function(svg){
+    var path = svg.querySelector('.lx-draw'); if (!path) return;
+    var NS = 'http://www.w3.org/2000/svg', g = document.createElementNS(NS, 'g');
+    g.setAttribute('class', 'lx-pulse');
+    g.innerHTML = '<circle r="11" fill="rgba(240,190,110,.25)"/><circle r="5.5" fill="#E6B86C" stroke="#fff" stroke-width="2"/>' +
+      '<animateMotion dur="5.5s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="linear" path="' + path.getAttribute('d') + '"/>';
+    svg.appendChild(g);
+  });
 })();
