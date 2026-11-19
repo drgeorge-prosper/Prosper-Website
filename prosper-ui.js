@@ -76,6 +76,8 @@
     if (hero) {
       hero.insertBefore(grid(false), hero.firstChild);
       var st = hero.querySelector('.stage');
+      var nt = hero.querySelector('.note');
+      if (nt) nt.parentNode.insertBefore(helix({horizontal: true, length: 760, amp: 28, rungs: 52, turns: 3.4, cls: 'lx-hero-strip', a: gold, b: bone, line: faint, r: 3.6, speed: .5}), nt.nextSibling);
       if (st) st.insertBefore(helix({length: 620, amp: 52, rungs: 46, turns: 3.2, cls: 'lx-hero-helix', a: gold, b: bone, line: faint, r: 4.4}), st.firstChild);
     }
     document.querySelectorAll('.page-hero').forEach(function(ph){
@@ -131,12 +133,12 @@
     f.size = function(){
       var r = host.getBoundingClientRect(), d = Math.min(window.devicePixelRatio || 1, 2);
       c.width = Math.round(r.width * d); c.height = Math.round(r.height * d); f.d = d; f.w = r.width; f.h = r.height;
-      var n = Math.round(Math.min(90, (r.width * r.height) / 14000 * f.density));
+      var n = Math.round(Math.min(60, (r.width * r.height) / 20000 * f.density));
       f.ps = []; for (var i = 0; i < n; i++) f.ps.push(f.spawn(true));
     };
     f.spawn = function(any){
       return {x: Math.random() * f.w, y: any ? Math.random() * f.h : f.h + 10, r: Math.random() * 1.6 + .4,
-        v: Math.random() * .25 + .08, sway: Math.random() * 6.28, a: Math.random() * .5 + .25, tw: Math.random() * 6.28};
+        v: Math.random() * .25 + .08, sway: Math.random() * 6.28, a: Math.random() * .35 + .15, tw: Math.random() * 6.28};
     };
     f.draw = function(t){
       var x = f.ctx; x.setTransform(f.d, 0, 0, f.d, 0, 0); x.clearRect(0, 0, f.w, f.h);
