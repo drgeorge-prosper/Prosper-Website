@@ -77,3 +77,9 @@ Not instrumented: coach_enquiry_submit. Retired: apply_click, apply_submit, prio
 
 ## Deploy trigger note
 Trivial edit to trigger the first Netlify branch-deploy build for prosper-v2, 21 July 2026.
+
+## Longevity visuals (November 2026)
+- `clinic.css` holds the `lx-` styles: grid texture, DNA helix, healthspan chart, "What a review can look at" grid, step icons.
+- `prosper-ui.js` injects an animated DNA helix (SVG, requestAnimationFrame, paused off screen, still for reduced motion) into the homepage hero, every `.page-hero`, every `.cta` and the homepage gold `.band`. No markup needed on new pages that use those classes.
+- Homepage: icons in the trust bar, steps and About facts; new "The science" section (`#science`) with the healthspan chart and eight review areas. The longevity medicine page carries the same chart.
+- The healthspan chart is labelled illustrative and carries no figures. Keep it that way. The review areas are examples; testing is still chosen per person, never shown as a fixed panel or a biomarker count.
