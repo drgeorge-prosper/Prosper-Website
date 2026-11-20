@@ -535,5 +535,79 @@ html,body{overflow-x:clip}
   .hero3 .lx-hero-strip{display:block;position:relative;width:calc(100% + 24px);height:84px;margin:30px -12px 0;opacity:.9}
 }
 
-/* Header: solid, so the fixed mobile menu is not trapped by a backdrop blur */
+/* =========================================================
+   Scientific plates (November 2026): hero anatomical plate,
+   areas wheel, fig labels. Fine gold linework, drawn once.
+   ========================================================= */
+/* Header: solid, so the fixed mobile menu is not trapped */
 .site-head{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;background:rgba(22,19,14,.97)!important}
+/* Fewer sparkles */
+.lx-dust{display:none}
+
+/* Hero plate */
+.lx-plate{margin:0;position:relative;z-index:1}
+.pl-svg{display:block;width:100%;height:auto;overflow:visible}
+.pl-geo *{fill:none;stroke:rgba(230,195,132,.14);stroke-width:1}
+.pl-geo .pl-dash{stroke-dasharray:3 7;stroke:rgba(230,195,132,.22)}
+.pl-geo .pl-axis{stroke:rgba(230,195,132,.09)}
+.pl-body{fill:none;stroke:var(--gold-lum,#E6C384);stroke-width:1.5;stroke-linejoin:round;stroke-linecap:round;filter:drop-shadow(0 0 6px rgba(240,200,130,.25));
+  stroke-dasharray:1;stroke-dashoffset:0;transition:stroke-dashoffset 2.6s cubic-bezier(.4,0,.2,1) .2s}
+.pl-detail{fill:none;stroke:rgba(230,195,132,.42);stroke-width:1;stroke-dasharray:1;stroke-dashoffset:0;transition:stroke-dashoffset 1.6s ease 1.2s}
+.pl-lead{fill:none;stroke:rgba(230,195,132,.6);stroke-width:1}
+.pl-dot{fill:#F3D9A2}
+.pl-ring{fill:none;stroke:rgba(243,217,162,.45)}
+.pl-n{font-family:var(--mono);font-weight:500;font-size:17px;letter-spacing:.14em;fill:var(--gold)}
+.pl-t{font-family:var(--serif);font-weight:600;font-size:31px;fill:var(--bone)}
+.pl-fig{font-family:var(--mono);font-weight:500;font-size:15px;letter-spacing:.2em;fill:rgba(244,239,230,.38)}
+.pl-co{transition:opacity .7s ease var(--d,1.6s)}
+.lx-plate.lx-obs:not(.lx-in) .pl-body,.lx-plate.lx-obs:not(.lx-in) .pl-detail{stroke-dashoffset:1}
+.lx-plate.lx-obs:not(.lx-in) .pl-co{opacity:0}
+@media (max-width:940px){.lx-plate{max-width:620px}}
+@media (max-width:600px){.hero3 .lx-plate{display:none}}
+
+/* Fig labels */
+.lx-figno{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-ink);margin-right:8px}
+
+/* Areas wheel */
+.lx-wheelwrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:96px;align-items:center;margin:56px 0 64px}
+.lx-wheelwrap[hidden]{display:none}
+.lx-wheel{position:relative;width:calc(100% - 140px);max-width:460px;aspect-ratio:1;margin:0 auto}
+.lx-wheel-svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.lx-wheel-svg circle{fill:none}
+.w-ring{stroke:rgba(194,154,91,.45);stroke-width:1}
+.w-dash{stroke:rgba(194,154,91,.35);stroke-dasharray:3 6}
+.w-faint{stroke:rgba(194,154,91,.15)}
+.w-hubring{stroke:rgba(194,154,91,.5);fill:#FFFDF8!important}
+.w-ticks line{stroke:rgba(125,93,43,.35);stroke-width:1}
+.w-spokes line{stroke:rgba(194,154,91,.28);stroke-width:1;transition:stroke .3s ease,stroke-width .3s ease}
+.w-spokes line.on{stroke:var(--gold);stroke-width:1.6}
+.lx-hub{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;pointer-events:none}
+.lx-hub span{display:block;font-family:var(--serif);font-weight:600;font-size:30px;line-height:1;color:var(--text)}
+.lx-hub small{display:block;margin-top:6px;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-ink)}
+.lx-node{position:absolute;left:50%;top:50%;width:0;height:0;border:0;padding:0;background:none;cursor:pointer}
+.lx-node .lx-ic{position:absolute;left:0;top:0;transform:translate(-50%,-50%);width:58px;height:58px;transition:transform .3s ease,box-shadow .3s ease}
+.lx-node .lx-ic svg{width:24px;height:24px}
+.lx-node b{position:absolute;white-space:nowrap;font-family:var(--sans);font-size:13.5px;font-weight:600;color:var(--text-2);transition:color .3s ease}
+.lx-node:hover .lx-ic,.lx-node:focus-visible .lx-ic{transform:translate(-50%,-50%) scale(1.08)}
+.lx-node.on .lx-ic{background:var(--gold-grad)!important;color:#1A1510!important;box-shadow:0 0 0 6px rgba(230,195,132,.22),0 12px 26px -8px rgba(194,140,70,.55)}
+.lx-node.on b{color:var(--text)}
+.lx-node:focus-visible{outline:none}
+.lx-node:focus-visible .lx-ic{outline:2px solid var(--gold-ink);outline-offset:4px}
+.lx-panel{background:linear-gradient(180deg,#FFFFFF,#FFFCF6);border:1px solid rgba(194,154,91,.22);border-radius:14px;padding:34px;box-shadow:0 30px 60px -30px rgba(150,100,40,.35)}
+.lx-panel-ic{width:52px!important;height:52px!important}
+.lx-panel-n{display:block;margin-top:18px;font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;color:var(--text-3)}
+.lx-panel-t{font-family:var(--serif);font-size:34px;font-weight:600;line-height:1.1;margin:6px 0 0}
+.lx-panel .mk{display:block;margin-top:10px;font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--gold-ink)}
+.lx-panel-p{margin-top:14px;font-size:16.5px;line-height:1.65;color:var(--text-2)}
+.lx-panel-hint{margin-top:22px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--text-3)}
+.lx-panel.swap .lx-panel-t,.lx-panel.swap .lx-panel-p,.lx-panel.swap .mk{animation:lxSwap .45s ease}
+@keyframes lxSwap{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+/* The wheel is the desktop view; phones keep the cards */
+.lx-has-wheel .lx-areas{display:none}
+@media (max-width:900px){.lx-has-wheel .lx-areas{display:grid}.lx-wheelwrap{display:none!important}}
+@media (prefers-reduced-motion:reduce){
+  .pl-body,.pl-detail,.pl-co{transition:none!important}
+  .lx-plate.lx-obs:not(.lx-in) .pl-body,.lx-plate.lx-obs:not(.lx-in) .pl-detail{stroke-dashoffset:0}
+  .lx-plate.lx-obs:not(.lx-in) .pl-co{opacity:1}
+  .lx-panel.swap *{animation:none!important}
+}

@@ -200,3 +200,54 @@
     svg.appendChild(g);
   });
 })();
+
+// Areas wheel (desktop): built from the area cards, which stay as the phone view.
+(function(){
+  var wrap = document.querySelector('.lx-wheelwrap');
+  var cards = document.querySelectorAll('.lx-areas .lx-area');
+  if (!wrap || !cards.length) return;
+  var wheel = wrap.querySelector('.lx-wheel'), svg = wrap.querySelector('.lx-wheel-svg');
+  var spokes = svg.querySelector('.w-spokes'), ticks = svg.querySelector('.w-ticks');
+  var panel = wrap.querySelector('.lx-panel'), NS = 'http://www.w3.org/2000/svg';
+  var n = cards.length, R = 214, C = 260, nodes = [], lines = [];
+  for (var t = 0; t < 72; t++) {
+    var ta = t / 72 * Math.PI * 2, r1 = 246, r2 = t % 9 === 0 ? 236 : 241;
+    var l = document.createElementNS(NS, 'line');
+    l.setAttribute('x1', C + r1 * Math.sin(ta)); l.setAttribute('y1', C - r1 * Math.cos(ta));
+    l.setAttribute('x2', C + r2 * Math.sin(ta)); l.setAttribute('y2', C - r2 * Math.cos(ta));
+    ticks.appendChild(l);
+  }
+  function show(i, focus){
+    var c = cards[i];
+    nodes.forEach(function(b, j){ b.classList.toggle('on', j === i); b.setAttribute('aria-pressed', j === i ? 'true' : 'false'); });
+    lines.forEach(function(l, j){ l.classList.toggle('on', j === i); });
+    panel.querySelector('.lx-panel-ic use').setAttribute('href', '/icons.svg#i-' + c.getAttribute('data-ic'));
+    panel.querySelector('.lx-panel-n').textContent = ('0' + (i + 1)) + ' / 0' + n;
+    panel.querySelector('.lx-panel-t').textContent = c.querySelector('h3').textContent;
+    panel.querySelector('.lx-panel-mk').textContent = c.querySelector('.mk').textContent;
+    panel.querySelector('.lx-panel-p').textContent = c.querySelector('p').textContent;
+    panel.classList.remove('swap'); void panel.offsetWidth; panel.classList.add('swap');
+  }
+  cards.forEach(function(c, i){
+    var a = i / n * Math.PI * 2, x = Math.sin(a), y = -Math.cos(a);
+    var l = document.createElementNS(NS, 'line');
+    l.setAttribute('x1', C + 74 * x); l.setAttribute('y1', C + 74 * y);
+    l.setAttribute('x2', C + (R - 30) * x); l.setAttribute('y2', C + (R - 30) * y);
+    spokes.appendChild(l); lines.push(l);
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'lx-node';
+    b.style.left = (50 + x * R / 520 * 100) + '%'; b.style.top = (50 + y * R / 520 * 100) + '%';
+    b.innerHTML = c.querySelector('.lx-ic').outerHTML + '<b>' + c.querySelector('h3').textContent + '</b>';
+    var lab = b.querySelector('b');
+    var off = 40;
+    if (Math.abs(x) < 0.2) { lab.style.left = '0'; lab.style.transform = 'translateX(-50%)'; lab.style.top = (y < 0 ? -off - 22 : off) + 'px'; }
+    else if (x > 0) { lab.style.left = off + 'px'; lab.style.top = '-9px'; }
+    else { lab.style.right = off + 'px'; lab.style.top = '-9px'; }
+    b.addEventListener('click', function(){ show(i); });
+    b.addEventListener('mouseenter', function(){ show(i); });
+    wheel.appendChild(b); nodes.push(b);
+  });
+  wrap.hidden = false;
+  wrap.closest('section').classList.add('lx-has-wheel');
+  show(0);
+})();
