@@ -534,3 +534,6 @@ html,body{overflow-x:clip}
 @media (max-width:600px){
   .hero3 .lx-hero-strip{display:block;position:relative;width:calc(100% + 24px);height:84px;margin:30px -12px 0;opacity:.9}
 }
+
+/* Header: solid, so the fixed mobile menu is not trapped by a backdrop blur */
+.site-head{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;background:rgba(22,19,14,.97)!important}
